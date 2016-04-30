@@ -1,2 +1,3 @@
 # pipeline-fragments
-Reusable fragments of LinkedPipes ETL pipelines
+
+Reusable fragments of [LinkedPipes ETL](http://etl.linkedpipes.com) pipelines.
