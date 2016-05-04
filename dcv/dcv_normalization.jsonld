@@ -1,0 +1,140 @@
+{
+  "@graph": [
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462357881568",
+          "@type": [
+            "http://linkedpipes.com/ontology/Pipeline"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "DCV normalization fragment"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/65578240-25da-4b06-ad64-04de2ffb2423",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "SPARQL update",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/t-sparqlUpdate"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": -20,
+          "http://linkedpipes.com/ontology/y": 0,
+          "http://purl.org/dc/terms/description": "Phase 1",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/65578240-25da-4b06-ad64-04de2ffb2423/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/ddeb7019-9272-4f60-a39b-5a75f6a23467",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "SPARQL update",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/t-sparqlUpdate"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 260,
+          "http://linkedpipes.com/ontology/y": 0,
+          "http://purl.org/dc/terms/description": "Phase 2",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/ddeb7019-9272-4f60-a39b-5a75f6a23467/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/connection/26188e16-9e9a-4b8b-bd86-a8691ff0fe93",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/65578240-25da-4b06-ad64-04de2ffb2423"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/ddeb7019-9272-4f60-a39b-5a75f6a23467"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462357881568"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/rS8VkC9",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "http://obeu.vse.cz/dump/aragon-2013-expenditure.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "aragon-2013-expenditure.ttl"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/2e1cbd51-6642-408e-9d57-f02b9a893f95/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query": "PREFIX rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX qb:             <http://purl.org/linked-data/cube#>\n\nINSERT {\n    ?o rdf:type qb:Observation .\n} WHERE {\n    [] qb:observation ?o .\n};\n\nINSERT {\n    ?o  rdf:type qb:Observation .\n    ?ds rdf:type qb:DataSet .\n} WHERE {\n    ?o qb:dataSet ?ds .\n};\n\nINSERT {\n    ?s rdf:type qb:Slice .\n} WHERE {\n    [] qb:slice ?s.\n};\n\nINSERT {\n    ?cs qb:componentProperty ?p .\n    ?p  rdf:type qb:DimensionProperty .\n} WHERE {\n    ?cs qb:dimension ?p .\n};\n\nINSERT {\n    ?cs qb:componentProperty ?p .\n    ?p  rdf:type qb:MeasureProperty .\n} WHERE {\n    ?cs qb:measure ?p .\n};\n\nINSERT {\n    ?cs qb:componentProperty ?p .\n    ?p  rdf:type qb:AttributeProperty .\n} WHERE {\n    ?cs qb:attribute ?p .\n}"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/65578240-25da-4b06-ad64-04de2ffb2423/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query": "PREFIX qb:             <http://purl.org/linked-data/cube#>\n\n# Dataset attachments\nINSERT {\n    ?obs  ?comp ?value\n} WHERE {\n    ?spec    qb:componentProperty ?comp ;\n             qb:componentAttachment qb:DataSet .\n    ?dataset qb:structure [qb:component ?spec];\n             ?comp ?value .\n    ?obs     qb:dataSet ?dataset.\n};\n\n# Slice attachments\nINSERT {\n    ?obs  ?comp ?value\n} WHERE {\n    ?spec    qb:componentProperty ?comp;\n             qb:componentAttachment qb:Slice .\n    ?dataset qb:structure [qb:component ?spec];\n             qb:slice ?slice .\n    ?slice ?comp ?value;\n           qb:observation ?obs .\n};\n\n# Dimension values on slices\nINSERT {\n    ?obs  ?comp ?value\n} WHERE {\n    ?spec    qb:componentProperty ?comp .\n    ?comp a  qb:DimensionProperty .\n    ?dataset qb:structure [qb:component ?spec];\n             qb:slice ?slice .\n    ?slice ?comp ?value;\n           qb:observation ?obs .\n}"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/ddeb7019-9272-4f60-a39b-5a75f6a23467/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/t-rdfToFile/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/t-rdfToFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileName": "aragon_2013_expenditure_normalized.ttl",
+          "http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileType": "text/turtle",
+          "http://plugins.linkedpipes.com/ontology/t-rdfToFile#graphUri": "http://localhost/default"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/6eaa5317-9074-4eb8-969b-1ff48c0f8638/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/l-filesToScp#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#userName": "uploader",
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#password": "obeu",
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#host": "obeu.vse.cz",
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#port": 22,
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#targetDirectory": "/tmp",
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#createDirectory": true
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/067b57bb-560d-4255-86e5-a2234748e032/configuration"
+    }
+  ]
+}
