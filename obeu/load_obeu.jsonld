@@ -1,0 +1,559 @@
+{
+  "@graph": [
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945",
+          "@type": [
+            "http://linkedpipes.com/ontology/Pipeline"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "OpenBudgets.eu data model"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/6b47e617-57f5-4d7f-80b7-83e857ab33ba",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 40,
+          "http://linkedpipes.com/ontology/y": 40,
+          "http://purl.org/dc/terms/description": "Budget code lists",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/6b47e617-57f5-4d7f-80b7-83e857ab33ba/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/d14e01ec-c579-4bd3-93cc-f55a19f96602",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 40,
+          "http://linkedpipes.com/ontology/y": 100,
+          "http://purl.org/dc/terms/description": "Budget components",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/d14e01ec-c579-4bd3-93cc-f55a19f96602/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/83e4eb8f-f687-426e-852f-de4ee6775bee",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 40,
+          "http://linkedpipes.com/ontology/y": 160,
+          "http://purl.org/dc/terms/description": "Budget concepts",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/83e4eb8f-f687-426e-852f-de4ee6775bee/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/32a4ec06-eb58-4059-95d0-bd31bb4ebcca",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 40,
+          "http://linkedpipes.com/ontology/y": 220,
+          "http://purl.org/dc/terms/description": "Budget metadata",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/32a4ec06-eb58-4059-95d0-bd31bb4ebcca/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/aaa6d723-3765-4b75-bb87-37e62c959e1c",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 40,
+          "http://linkedpipes.com/ontology/y": 280,
+          "http://purl.org/dc/terms/description": "Budget",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/aaa6d723-3765-4b75-bb87-37e62c959e1c/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/63b80462-7362-486b-b108-95e851ce3094",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 40,
+          "http://linkedpipes.com/ontology/y": 340,
+          "http://purl.org/dc/terms/description": "Spending code lists",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/63b80462-7362-486b-b108-95e851ce3094/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/41942b97-0431-4b62-afda-d71fb04f9da2",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 40,
+          "http://linkedpipes.com/ontology/y": 400,
+          "http://purl.org/dc/terms/description": "Spending components",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/41942b97-0431-4b62-afda-d71fb04f9da2/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/e306bc72-52b7-4f31-bf2e-1266d95eeea9",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 40,
+          "http://linkedpipes.com/ontology/y": 460,
+          "http://purl.org/dc/terms/description": "Links",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/e306bc72-52b7-4f31-bf2e-1266d95eeea9/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Files to RDF",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/t-filesToRdf"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 340,
+          "http://linkedpipes.com/ontology/y": 240
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/5dfb0f9f-9c34-484a-8d39-f7da5991589f",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/6b47e617-57f5-4d7f-80b7-83e857ab33ba"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/712d225b-73a8-49f9-9f91-979618a2e841",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/d14e01ec-c579-4bd3-93cc-f55a19f96602"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/2404ef3f-910b-4f1d-86ac-a13126337ea1",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/83e4eb8f-f687-426e-852f-de4ee6775bee"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/f6d5a52d-98b0-4e19-aa64-1fe10876b5f9",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/32a4ec06-eb58-4059-95d0-bd31bb4ebcca"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/f96dbe7e-a10f-4b01-9015-7154854d6325",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/aaa6d723-3765-4b75-bb87-37e62c959e1c"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/37ba08da-5951-452a-b1e9-b151d0b4b5af",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/63b80462-7362-486b-b108-95e851ce3094"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/5cc09e92-6e4f-4ea0-9ea8-555ee12521d2",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/41942b97-0431-4b62-afda-d71fb04f9da2"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/0c96a9e3-59af-437f-98f1-83fae6957cd8",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/e306bc72-52b7-4f31-bf2e-1266d95eeea9"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/04a9a178-d4b9-4f14-8239-b4c384072028",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Graph merger",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/t-graphMerger"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 540,
+          "http://linkedpipes.com/ontology/y": 240
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/210b3970-f192-409f-8b2d-2b97a08e6a9b",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/24e25e01-5149-4239-84e3-ecf4d7de1d08"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/04a9a178-d4b9-4f14-8239-b4c384072028"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/2a689418-4a43-449e-b702-6e0339f1429f",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "RDF to file",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/t-rdfToFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 740,
+          "http://linkedpipes.com/ontology/y": 240,
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/2a689418-4a43-449e-b702-6e0339f1429f/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/0745249e-d4d0-46c1-a501-990884525e71",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/04a9a178-d4b9-4f14-8239-b4c384072028"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/2a689418-4a43-449e-b702-6e0339f1429f"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/b785c3c8-8a35-47f1-b358-b5369b331dfb",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Graph store protocol",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/l-graphStoreProtocol"
+          },
+          "http://linkedpipes.com/ontology/x": 920,
+          "http://linkedpipes.com/ontology/y": 240,
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/b785c3c8-8a35-47f1-b358-b5369b331dfb/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/connection/3b09701e-bbd8-4dcf-9111-f0cc00e68d95",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/2a689418-4a43-449e-b702-6e0339f1429f"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputFile",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/b785c3c8-8a35-47f1-b358-b5369b331dfb"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/QXd9aNZ",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "https://raw.githubusercontent.com/openbudgets/data-model/master/budget/budget-codelists.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "budget-codelists.ttl"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/6b47e617-57f5-4d7f-80b7-83e857ab33ba/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/akBoAKi",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "https://raw.githubusercontent.com/openbudgets/data-model/master/budget/budget-components.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "budget-components.ttl"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/d14e01ec-c579-4bd3-93cc-f55a19f96602/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/akBoAKi",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "https://raw.githubusercontent.com/openbudgets/data-model/master/budget/budget-concepts.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "budget-concepts.ttl"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/83e4eb8f-f687-426e-852f-de4ee6775bee/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/akBoAKi",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "https://raw.githubusercontent.com/openbudgets/data-model/master/budget/budget-metadata.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "budget-metadata.ttl"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/32a4ec06-eb58-4059-95d0-bd31bb4ebcca/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/akBoAKi",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "https://raw.githubusercontent.com/openbudgets/data-model/master/budget/budget.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "budget.ttl"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/aaa6d723-3765-4b75-bb87-37e62c959e1c/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/akBoAKi",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "https://raw.githubusercontent.com/openbudgets/data-model/master/spending/spending-codelists.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "spending-codelists.ttl"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/63b80462-7362-486b-b108-95e851ce3094/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/akBoAKi",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "https://raw.githubusercontent.com/openbudgets/data-model/master/spending/spending-components.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "spending-components.ttl"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/41942b97-0431-4b62-afda-d71fb04f9da2/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/akBoAKi",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "https://raw.githubusercontent.com/openbudgets/data-model/master/links/links.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "links.ttl"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/e306bc72-52b7-4f31-bf2e-1266d95eeea9/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/t-rdfToFile/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/t-rdfToFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileName": "ontology.ttl",
+          "http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileType": "text/turtle",
+          "http://plugins.linkedpipes.com/ontology/t-rdfToFile#graphUri": "http://localhost/default"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/2a689418-4a43-449e-b702-6e0339f1429f/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#graph": "http://data.openbudgets.eu/ontology",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#repository": "VIRTUOSO",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#authentification": true,
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#user": "dba",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#password": "dba",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpointSelect": "",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpoint": "http://localhost:8890/sparql-graph-crud-auth",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#replace": true
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463384852945/components/b785c3c8-8a35-47f1-b358-b5369b331dfb/configuration"
+    }
+  ]
+}
