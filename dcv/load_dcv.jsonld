@@ -1,0 +1,170 @@
+{
+  "@graph": [
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1460966066779",
+          "@type": [
+            "http://linkedpipes.com/ontology/Pipeline"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Load Data Cube Vocabulary"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/9f22c488-2096-42ba-b23b-e359805e6f1f",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+          },
+          "http://linkedpipes.com/ontology/x": 100,
+          "http://linkedpipes.com/ontology/y": 140,
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/9f22c488-2096-42ba-b23b-e359805e6f1f/configuration"
+          },
+          "http://purl.org/dc/terms/description": "Get the Data Cube Vocabulary"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/70409b6b-b783-42e1-a662-c1cdbc7e4b78",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Graph store protocol",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/l-graphStoreProtocol"
+          },
+          "http://linkedpipes.com/ontology/x": 420,
+          "http://linkedpipes.com/ontology/y": 140,
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/70409b6b-b783-42e1-a662-c1cdbc7e4b78/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/connection/b1c909ee-c25e-429a-bf60-51ff0ae466cc",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/9f22c488-2096-42ba-b23b-e359805e6f1f"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/70409b6b-b783-42e1-a662-c1cdbc7e4b78"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1460966066779"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/q5MzFqm",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "http://purl.org/linked-data/cube",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "qb.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#hardRedirect": true
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/9f22c488-2096-42ba-b23b-e359805e6f1f/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/l-filesToLocal#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/l-filesToLocal#path": "tmp"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/e6d6d583-4f21-4be2-b1c4-7388a12f5506/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#graph": "http://purl.org/linked-data/cube",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#repository": "VIRTUOSO",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#authentification": true,
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#user": "dba",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#password": "dba",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpointSelect": "",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpoint": "http://localhost:8890/sparql-graph-crud-auth",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#replace": true
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/70409b6b-b783-42e1-a662-c1cdbc7e4b78/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#query": "ASK { ?s ?p \"bork\" }",
+          "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#failOnTrue": false
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/90e955c2-965c-4f39-89e5-56f8c560f1df/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-textHolder#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-textHolder#fileName": "output.ttl",
+          "http://plugins.linkedpipes.com/ontology/e-textHolder#content": ""
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/e4092de4-fdd2-435e-9fca-1c6f789225eb/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#graph": "http://purl.org/linked-data/cube",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#repository": "VIRTUOSO",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#authentification": true,
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#user": "dba",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#password": "dba",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpointSelect": "",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpoint": "http://localhost:8890/sparql-graph-crud-auth",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#replace": true
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/c3da0952-ff3d-41a7-ab29-a0549364dff6/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#query": "ASK { ?s ?p ?o }",
+          "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#failOnTrue": true
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1460966066779/components/a57ef339-2951-4c24-a9ef-d28e775b746f/configuration"
+    }
+  ]
+}
