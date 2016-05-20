@@ -2284,7 +2284,7 @@
           "@type": [
             "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#Configuration"
           ],
-          "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#query": "PREFIX qb: <http://purl.org/linked-data/cube#>\n\nASK {\n  [] a qb:DataStructureDefinition ;\n    qb:component [ ?cp ?componentProperty ] .\n  FILTER NOT EXISTS {\n    ?componentProperty ?p ?o .\n  }\n}",
+          "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#query": "PREFIX qb: <http://purl.org/linked-data/cube#>\n\nASK {\n  [] a qb:DataStructureDefinition ;\n    qb:component/(qb:componentProperty|qb:dimension|qb:meausure|qb:attribute) ?componentProperty .\n  FILTER NOT EXISTS {\n    ?componentProperty ?p [] .\n  }\n}",
           "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#failOnTrue": true
         }
       ],
@@ -2297,7 +2297,7 @@
           "@type": [
             "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#Configuration"
           ],
-          "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#query": "PREFIX qb: <http://purl.org/linked-data/cube#>\n\nASK {\n  [] a qb:DataStructureDefinition ;\n    qb:component [ ?cp [ qb:codeList ?codeList ] ] .\n  FILTER NOT EXISTS {\n    ?codeList ?p ?o .\n  }\n}",
+          "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#query": "PREFIX qb: <http://purl.org/linked-data/cube#>\n\nASK {\n  [] a qb:DataStructureDefinition ;\n    qb:component/(qb:componentProperty|qb:dimension|qb:meausure|qb:attribute)/qb:codeList ?codeList .\n  FILTER NOT EXISTS {\n    ?codeList ?p ?o .\n  }\n}",
           "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#failOnTrue": true
         }
       ],
