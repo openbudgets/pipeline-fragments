@@ -1,0 +1,118 @@
+{
+  "@graph": [
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463819534821",
+          "@type": [
+            "http://linkedpipes.com/ontology/Pipeline"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Cache reference.data.gov.uk"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/501ba58d-651b-4160-80e3-7baa6ea32509",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "SPARQL endpoint",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/e-sparqlEndpoint"
+          },
+          "http://linkedpipes.com/ontology/x": 60,
+          "http://linkedpipes.com/ontology/y": 60,
+          "http://purl.org/dc/terms/description": "Extract missing reference.data.gov.uk IRIs",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/501ba58d-651b-4160-80e3-7baa6ea32509/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/3485e95b-1f0b-4043-b7d3-06dd9b0c8e1f",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get list",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/e-httpGetFiles"
+          },
+          "http://linkedpipes.com/ontology/x": 500,
+          "http://linkedpipes.com/ontology/y": 60
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/connection/4e4641f3-5819-43a8-8232-4c906a21b2c9",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/501ba58d-651b-4160-80e3-7baa6ea32509"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/3485e95b-1f0b-4043-b7d3-06dd9b0c8e1f"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "Configuration"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/bb8c3dd8-85ca-4152-9ae6-02e3241720c2",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Graph store protocol",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/l-graphStoreProtocol"
+          },
+          "http://linkedpipes.com/ontology/x": 680,
+          "http://linkedpipes.com/ontology/y": 60,
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/bb8c3dd8-85ca-4152-9ae6-02e3241720c2/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/connection/dbc62d86-210a-4da7-9b76-9208d32f0b2f",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/3485e95b-1f0b-4043-b7d3-06dd9b0c8e1f"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/bb8c3dd8-85ca-4152-9ae6-02e3241720c2"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463819534821"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#query": "PREFIX httpList:       <http://plugins.linkedpipes.com/ontology/e-httpGetFiles#>\nPREFIX local:          <http://localhost/ontology/>\nPREFIX obeu-dimension: <http://data.openbudgets.eu/ontology/dsd/dimension/>\n\nCONSTRUCT {\n  local:config a httpList:Configuration ;\n    httpList:reference ?temporal .\n\n  ?temporal a httpList:Reference ;\n    httpList:fileUri ?temporal ;\n    httpList:fileName ?fileName . \n}\nWHERE {\n  {\n    SELECT DISTINCT ?temporal\n    WHERE {\n      [] obeu-dimension:fiscalYear ?temporal .\n    }\n  }\n  FILTER STRSTARTS(STR(?temporal), \"http://reference.data.gov.uk\")\n  FILTER NOT EXISTS {\n    GRAPH <http://reference.data.gov.uk> {\n      ?temporal ?p [] .\n    }\n  }\n  BIND (CONCAT(MD5(STR(?temporal)), \".rdf\") AS ?fileName)\n}",
+          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#endpoint": "http://obeu.vse.cz:8890/sparql"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/501ba58d-651b-4160-80e3-7baa6ea32509/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#graph": "http://reference.data.gov.uk",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#repository": "VIRTUOSO",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#authentification": true,
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#user": "dba",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#password": "loddva",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpointSelect": "",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpoint": "http://obeu.vse.cz:8890/sparql-graph-crud-auth"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/bb8c3dd8-85ca-4152-9ae6-02e3241720c2/configuration"
+    }
+  ]
+}
