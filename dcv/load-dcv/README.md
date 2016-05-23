@@ -1,6 +1,6 @@
 # Load DCV
 
-**URL:** 
+**URL:** <https://github.com/openbudgets/pipeline-fragments/raw/master/dcv/load-dcv/load_dcv.jsonld>
 
 Pipeline fragment to load the [Data Cube Vocabulary](https://www.w3.org/TR/vocab-data-cube/) to a local RDF store into the named graph `http://purl.org/linked-data/cube`.
 

@@ -25,7 +25,8 @@
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462278684838/components/fa854f59-d76c-406b-84e2-1330ce87c8a7/configuration"
           },
-          "http://purl.org/dc/terms/description": "DSD to Mustache data: add input DSD"
+          "http://purl.org/dc/terms/description": "DSD to Mustache data: add input DSD",
+          "http://linkedpipes.com/ontology/color": "#ff0000"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1462278684838/components/05ee5db2-e5f5-4267-80d9-1e1dbacad832",
@@ -152,7 +153,8 @@
           "http://purl.org/dc/terms/description": "DCV to CSV: add input dataset",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462278684838/components/9d0663c7-d5df-46fe-91b9-6b71aee93dfc/configuration"
-          }
+          },
+          "http://linkedpipes.com/ontology/color": "#ff0000"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1462278684838/connection/d4c70f7b-066a-4b02-b312-e3b1b6ac7a1a",
