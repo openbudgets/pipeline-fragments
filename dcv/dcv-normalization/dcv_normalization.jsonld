@@ -22,10 +22,11 @@
           ],
           "http://linkedpipes.com/ontology/x": -20,
           "http://linkedpipes.com/ontology/y": 0,
-          "http://purl.org/dc/terms/description": "Phase 1",
+          "http://purl.org/dc/terms/description": "Phase 1, add input data",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/65578240-25da-4b06-ad64-04de2ffb2423/configuration"
-          }
+          },
+          "http://linkedpipes.com/ontology/color": "#ff0000"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/ddeb7019-9272-4f60-a39b-5a75f6a23467",
@@ -38,9 +39,9 @@
               "@id": "http://localhost:8080/resources/components/t-sparqlUpdate"
             }
           ],
-          "http://linkedpipes.com/ontology/x": 260,
+          "http://linkedpipes.com/ontology/x": 380,
           "http://linkedpipes.com/ontology/y": 0,
-          "http://purl.org/dc/terms/description": "Phase 2",
+          "http://purl.org/dc/terms/description": "Phase 2, output data",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462357881568/components/ddeb7019-9272-4f60-a39b-5a75f6a23467/configuration"
           }
