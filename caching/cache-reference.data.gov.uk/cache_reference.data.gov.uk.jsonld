@@ -64,7 +64,9 @@
           "http://linkedpipes.com/ontology/y": 60,
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/components/bb8c3dd8-85ca-4152-9ae6-02e3241720c2/configuration"
-          }
+          },
+          "http://purl.org/dc/terms/description": "Add RDF store connection",
+          "http://linkedpipes.com/ontology/color": "#ff0000"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1463819534821/connection/dbc62d86-210a-4da7-9b76-9208d32f0b2f",
