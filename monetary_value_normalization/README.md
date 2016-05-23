@@ -1,6 +1,6 @@
 # Monetary value normalization
 
-**URL:** 
+**URL:** <https://github.com/openbudgets/pipeline-fragments/raw/master/monetary_value_normalization/monetary_value_normalization.jsonld>
 
 This pipeline fragment normalizes monetary amounts using average yearly exchange rates and implicit deflators based on GDP, both of which are sourced from [Eurostat](http://eurostat.linked-statistics.org).
 
