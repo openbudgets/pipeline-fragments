@@ -1,0 +1,102 @@
+{
+  "@graph": [
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463124219405",
+          "@type": [
+            "http://linkedpipes.com/ontology/Pipeline"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Load tec000033"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463124219405/components/87e5ac53-97fe-4946-b594-9a055507a81a",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "HTTP get",
+          "http://linkedpipes.com/ontology/template": [
+            {
+              "@id": "http://localhost:8080/resources/components/e-httpGetFile"
+            }
+          ],
+          "http://linkedpipes.com/ontology/x": 40,
+          "http://linkedpipes.com/ontology/y": 60,
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463124219405/components/87e5ac53-97fe-4946-b594-9a055507a81a/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463124219405/components/0294facb-dcfa-4f25-8386-c1d90e6130a3",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Graph store protocol",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/l-graphStoreProtocol"
+          },
+          "http://linkedpipes.com/ontology/x": 200,
+          "http://linkedpipes.com/ontology/y": 60,
+          "http://purl.org/dc/terms/description": "Add RDF store connection",
+          "http://linkedpipes.com/ontology/color": "#ff0000",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463124219405/components/0294facb-dcfa-4f25-8386-c1d90e6130a3/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1463124219405/connection/d56ded9d-4b8a-40ea-bc1b-8101978b712d",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463124219405/components/87e5ac53-97fe-4946-b594-9a055507a81a"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "FilesOutput",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1463124219405/components/0294facb-dcfa-4f25-8386-c1d90e6130a3"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463124219405"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGet#Configuration"
+          ]
+        },
+        {
+          "@id": "http://localhost/resources/temp/A3NZRVp",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-httpGetFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileUri": "http://eurostat.linked-statistics.org/data/tec000033.rdf",
+          "http://plugins.linkedpipes.com/ontology/e-httpGetFile#fileName": "tec000033.rdf"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463124219405/components/87e5ac53-97fe-4946-b594-9a055507a81a/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#graph": "http://eurostat.linked-statistics.org/data/nama_10_gdp",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#repository": "VIRTUOSO",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#authentification": true,
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#user": "dba",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#password": "loddva",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpointSelect": "",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpoint": "http://obeu.vse.cz:8890/sparql-graph-crud-auth",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#replace": true
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1463124219405/components/0294facb-dcfa-4f25-8386-c1d90e6130a3/configuration"
+    }
+  ]
+}
