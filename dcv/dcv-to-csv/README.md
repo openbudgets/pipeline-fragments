@@ -1,8 +1,8 @@
 # DCV to CSV transformation
 
-**URL:** 
+**URL:** <https://github.com/openbudgets/pipeline-fragments/raw/master/dcv/dcv-to-csv/dcv_to_csv.jsonld>
 
-Pipeline fragment that transforms a [Data Cube Vocabulary](https://www.w3.org/TR/vocab-data-cube/) dataset into a single CSV table using the dataset's [data structure definition](https://www.w3.org/TR/vocab-data-cube/#dsd) (DSD).
+Pipeline fragment that transforms [Data Cube Vocabulary](https://www.w3.org/TR/vocab-data-cube/) datasets into CSV tables using datasets' [data structure definitions](https://www.w3.org/TR/vocab-data-cube/#dsd) (DSD).
 
 ## Input
 
