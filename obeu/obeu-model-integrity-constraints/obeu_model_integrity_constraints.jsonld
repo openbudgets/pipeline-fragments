@@ -102,11 +102,13 @@
               "@id": "http://localhost:8080/resources/components/x-virtuoso"
             }
           ],
-          "http://linkedpipes.com/ontology/x": 820,
+          "http://linkedpipes.com/ontology/x": 780,
           "http://linkedpipes.com/ontology/y": 300,
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/03c19c5c-8e3d-4738-b5ba-f04931b3056b/configuration"
-          }
+          },
+          "http://purl.org/dc/terms/description": "Provide Virtuoso connection",
+          "http://linkedpipes.com/ontology/color": "#ff0000"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/ca702453-289a-4fd2-8987-5ccc396dbcc5",
@@ -140,7 +142,9 @@
           "http://linkedpipes.com/ontology/y": 220,
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/95b6d39b-9ace-4f8b-969d-deb7e2946566/configuration"
-          }
+          },
+          "http://purl.org/dc/terms/description": "Provide SCP connection",
+          "http://linkedpipes.com/ontology/color": "#ff0000"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/connection/04b5ba08-66ad-4a31-aa0d-8d7d8b5053ff",
@@ -465,7 +469,6 @@
           "http://linkedpipes.com/ontology/x": 1280,
           "http://linkedpipes.com/ontology/y": 500,
           "http://purl.org/dc/terms/description": "Generate validation report",
-          "http://linkedpipes.com/ontology/color": "#ff0000",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/2c46822c-0da7-42a9-aba5-77d619571fa0/configuration"
           }
@@ -511,7 +514,9 @@
           "http://linkedpipes.com/ontology/y": 620,
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/de2e0c59-9c86-42a7-8729-cf01f3420e5b/configuration"
-          }
+          },
+          "http://purl.org/dc/terms/description": "Provide SCP connection",
+          "http://linkedpipes.com/ontology/color": "#ff0000"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/connection/1803f132-9986-4017-87f9-f4f8224870b5",
@@ -538,12 +543,13 @@
               "@id": "http://localhost:8080/resources/components/x-virtuoso"
             }
           ],
-          "http://linkedpipes.com/ontology/x": 1200,
+          "http://linkedpipes.com/ontology/x": 1280,
           "http://linkedpipes.com/ontology/y": 620,
-          "http://purl.org/dc/terms/description": "Clear validated dataset",
+          "http://purl.org/dc/terms/description": "Clear validated dataset, add connection to Virtuoso",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/d0da1f1f-1092-4614-b283-87df858d4527/configuration"
-          }
+          },
+          "http://linkedpipes.com/ontology/color": "#ff0000"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/connection/19d9cb5e-3d6f-4f01-8269-5b2343f75982",
