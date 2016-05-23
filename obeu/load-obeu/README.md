@@ -1,6 +1,6 @@
 # Load OpenBudgets.eu data model
 
-**URL:**
+**URL:** <https://github.com/openbudgets/pipeline-fragments/raw/master/obeu/load-obeu/load_obeu.jsonld>
 
 Pipeline fragment to load the [OpenBudgets.eu data model](https://github.com/openbudgets/data-model) to a local RDF store into the named graph `http://data.openbudgets.eu/ontology`.
 
