@@ -1,6 +1,6 @@
 # DCV validation
 
-**URL:**
+**URL:** <https://github.com/openbudgets/pipeline-fragments/raw/master/dcv/dcv-validation/dcv_validation.jsonld>
 
 Pipeline fragment that validates [Data Cube Vocabulary](https://www.w3.org/TR/vocab-data-cube/) (DCV) datasets using the [DCV integrity constraints](https://www.w3.org/TR/vocab-data-cube/#wf-rules).
 
