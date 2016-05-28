@@ -20,7 +20,7 @@ Pipeline fragment that validates additional [integrity constraints of the OpenBu
 
 ## Configuration
 
-Connection to Virtuoso RDF store to execute the validation in must be provided in the [Virtuoso component](http://etl.linkedpipes.com/components/x-virtuoso).
+Connection to Virtuoso RDF store to execute the validation in must be provided in the [Virtuoso component](http://etl.linkedpipes.com/components/x-virtuoso). Additionally, SPARQL 1.1 Graph Store protocol connection for the Virtuoso RDF store configured in the [Graph store protocol](http://etl.linkedpipes.com/components/l-graphstoreprotocol) component must be provided.
 
 ## Prerequisites
 

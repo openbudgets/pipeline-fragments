@@ -200,7 +200,7 @@
               "@id": "http://localhost:8080/resources/components/e-sparqlEndpoint"
             }
           ],
-          "http://linkedpipes.com/ontology/x": 100,
+          "http://linkedpipes.com/ontology/x": 60,
           "http://linkedpipes.com/ontology/y": 400,
           "http://purl.org/dc/terms/description": "Wrong QB character case",
           "http://linkedpipes.com/ontology/configurationGraph": {
@@ -230,7 +230,7 @@
               "@id": "http://localhost:8080/resources/components/e-sparqlEndpoint"
             }
           ],
-          "http://linkedpipes.com/ontology/x": 360,
+          "http://linkedpipes.com/ontology/x": 320,
           "http://linkedpipes.com/ontology/y": 400,
           "http://purl.org/dc/terms/description": "Code list redefinition",
           "http://linkedpipes.com/ontology/configurationGraph": {
@@ -260,9 +260,9 @@
               "@id": "http://localhost:8080/resources/components/e-sparqlEndpoint"
             }
           ],
-          "http://linkedpipes.com/ontology/x": 600,
+          "http://linkedpipes.com/ontology/x": 540,
           "http://linkedpipes.com/ontology/y": 400,
-          "http://purl.org/dc/terms/description": "Missing currency",
+          "http://purl.org/dc/terms/description": "Missing mandatory component",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/8cab683d-f320-4b3f-9f0f-a96259a509f1/configuration"
           }
@@ -730,6 +730,94 @@
           "http://linkedpipes.com/ontology/targetComponent": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/163d7c02-64f4-4304-9aa2-bd97b98a6ded"
           }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/c20fb866-63a2-41cb-80f0-4ed0d2eeaba1",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Graph store protocol",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/l-graphStoreProtocol"
+          },
+          "http://linkedpipes.com/ontology/x": 1100,
+          "http://linkedpipes.com/ontology/y": 100,
+          "http://purl.org/dc/terms/description": "Load OpenBudgets.eu to the validated named graph",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/c20fb866-63a2-41cb-80f0-4ed0d2eeaba1/configuration"
+          },
+          "http://linkedpipes.com/ontology/color": "#ff0000"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/b3113450-d90b-42e5-a348-17b6e349958c",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "SPARQL endpoint",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/e-sparqlEndpoint"
+          },
+          "http://linkedpipes.com/ontology/x": 560,
+          "http://linkedpipes.com/ontology/y": 0,
+          "http://purl.org/dc/terms/description": "Get OpenBudgets.eu data model",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/b3113450-d90b-42e5-a348-17b6e349958c/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/a72fe371-b947-41bb-8581-f75a8161ee76",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "RDF to file",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/t-rdfToFile"
+          },
+          "http://linkedpipes.com/ontology/x": 860,
+          "http://linkedpipes.com/ontology/y": 0,
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/a72fe371-b947-41bb-8581-f75a8161ee76/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/connection/4f2dc041-a6ae-42e7-a174-1dd1b34b82ff",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/b3113450-d90b-42e5-a348-17b6e349958c"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/a72fe371-b947-41bb-8581-f75a8161ee76"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/connection/2b957738-c2c7-4efb-a0a6-70eff6c06479",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/a72fe371-b947-41bb-8581-f75a8161ee76"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputFile",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/c20fb866-63a2-41cb-80f0-4ed0d2eeaba1"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/connection/5ce482f4-c07b-430b-bfc1-648a8aaa81f6",
+          "@type": [
+            "http://linkedpipes.com/ontology/RunAfter"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/c20fb866-63a2-41cb-80f0-4ed0d2eeaba1"
+          },
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/03c19c5c-8e3d-4738-b5ba-f04931b3056b"
+          }
         }
       ],
       "@id": "http://localhost:8080/resources/pipelines/created-1462793153362"
@@ -968,7 +1056,6 @@
           "@type": [
             "http://plugins.linkedpipes.com/ontology/x-virtuoso#Configuration"
           ],
-          "http://plugins.linkedpipes.com/ontology/x-virtuoso#clearGraph": true,
           "http://plugins.linkedpipes.com/ontology/x-virtuoso#directory": "/tmp",
           "http://plugins.linkedpipes.com/ontology/x-virtuoso#graph": "http://data.openbudgets.eu/resource/dataset/validated-dataset",
           "http://plugins.linkedpipes.com/ontology/x-virtuoso#updateInterval": 10,
@@ -1061,7 +1148,7 @@
           "@type": [
             "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#Configuration"
           ],
-          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#query": "PREFIX obeu-attribute: <http://data.openbudgets.eu/ontology/dsd/attribute/>\nPREFIX qb:             <http://purl.org/linked-data/cube#>\nPREFIX rdfs:           <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX spin:           <http://spinrdf.org/spin#>\n\nCONSTRUCT {\n  [] a spin:ConstraintViolation ;\n    spin:violationRoot ?dsd ;\n    spin:violationPath qb:component ;\n    spin:violationValue obeu-attribute:currency ;\n    rdfs:label \"Data structure definition is missing the currency attribute.\"@en .\n}\nWHERE {\n  GRAPH <http://data.openbudgets.eu/resource/dataset/validated-dataset> {\n    ?dsd a qb:DataStructureDefinition .\n    FILTER NOT EXISTS {\n      VALUES ?attributeProperty {\n        qb:attribute\n        qb:componentProperty\n      }\n      ?dsd qb:component [\n        ?attributeProperty obeu-attribute:currency\n      ] .\n    }\n  }\n}",
+          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#query": "PREFIX obeu-attribute: <http://data.openbudgets.eu/ontology/dsd/attribute/>\nPREFIX obeu-dimension: <http://data.openbudgets.eu/ontology/dsd/dimension/>\nPREFIX obeu-measure:   <http://data.openbudgets.eu/ontology/dsd/measure/>\nPREFIX qb:             <http://purl.org/linked-data/cube#>\nPREFIX rdfs:           <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX spin:           <http://spinrdf.org/spin#>\n\nCONSTRUCT {\n  [] a spin:ConstraintViolation ;\n    spin:violationRoot ?dsd ;\n    spin:violationPath qb:component ;\n    spin:violationValue ?componentProperty ; \n    rdfs:label \"Missing required component property.\"@en .\n}\nWHERE {\n  GRAPH <http://data.openbudgets.eu/resource/dataset/validated-dataset> {\n    ?dsd a qb:DataStructureDefinition .\n    VALUES ?componentProperty {\n      obeu-attribute:currency \n      obeu-dimension:fiscalPeriod\n      obeu-dimension:operationCharacter\n      obeu-dimension:organization\n      obeu-measure:amount\n    }\n    FILTER NOT EXISTS {\n      ?dsd qb:component/qb:componentProperty/rdfs:subPropertyOf* ?componentProperty .\n    }\n  }\n}",
           "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#endpoint": "http://obeu.vse.cz:8890/sparql"
         }
       ],
@@ -1202,6 +1289,51 @@
         }
       ],
       "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/f50c5dfa-7f9f-4a80-af3c-28ad8ee2c0d6/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#query": "CONSTRUCT {\n  ?s ?p ?o .\n}\nWHERE {\n  GRAPH <http://data.openbudgets.eu/ontology> { \n    ?s ?p ?o .\n  }\n}",
+          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#endpoint": "http://obeu.vse.cz:8890/sparql"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/b3113450-d90b-42e5-a348-17b6e349958c/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/t-rdfToFile/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/t-rdfToFile#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileName": "obeu.ttl",
+          "http://plugins.linkedpipes.com/ontology/t-rdfToFile#fileType": "text/turtle",
+          "http://plugins.linkedpipes.com/ontology/t-rdfToFile#graphUri": "http://localhost/default"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/a72fe371-b947-41bb-8581-f75a8161ee76/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#graph": "http://data.openbudgets.eu/resource/dataset/validated-dataset",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#repository": "VIRTUOSO",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#authentification": true,
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#user": "dba",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#password": "loddva",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpointSelect": "",
+          "http://plugins.linkedpipes.com/ontology/l-graphStoreProtocol#endpoint": "http://obeu.vse.cz:8890/sparql-graph-crud-auth"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/c20fb866-63a2-41cb-80f0-4ed0d2eeaba1/configuration"
     }
   ]
 }
