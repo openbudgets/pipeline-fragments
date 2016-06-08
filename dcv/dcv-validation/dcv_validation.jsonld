@@ -1874,7 +1874,7 @@
           "@type": [
             "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#Configuration"
           ],
-          "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#query": "PREFIX qb:    <http://purl.org/linked-data/cube#>\nPREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX skos:  <http://www.w3.org/2004/02/skos/core#>\nPREFIX spin:  <http://spinrdf.org/spin#>\n\nCONSTRUCT {\n  [] a spin:ConstraintViolation ;\n    spin:violationRoot ?dim ;\n    spin:violationPath qb:codeList ;\n    rdfs:label \"IC-5\" ;\n    rdfs:comment \"Every dimension with range skos:Concept must have a qb:codeList.\"@en .\n}\nWHERE {\n  [] a qb:DataSet ;\n    qb:component/qb:componentProperty ?dim .\n  ?dim a qb:DimensionProperty ;\n    rdfs:range skos:Concept .\n  FILTER NOT EXISTS { ?dim qb:codeList [] . }\n}"
+          "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#query": "PREFIX qb:    <http://purl.org/linked-data/cube#>\nPREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX skos:  <http://www.w3.org/2004/02/skos/core#>\nPREFIX spin:  <http://spinrdf.org/spin#>\n\nCONSTRUCT {\n  [] a spin:ConstraintViolation ;\n    spin:violationRoot ?dim ;\n    spin:violationPath qb:codeList ;\n    rdfs:label \"IC-5\" ;\n    rdfs:comment \"Every dimension with range skos:Concept must have a qb:codeList.\"@en .\n}\nWHERE {\n  [] a qb:DataStructureDefinition ;\n    qb:component/qb:componentProperty ?dim .\n  ?dim a qb:DimensionProperty ;\n    rdfs:range skos:Concept .\n  FILTER NOT EXISTS { ?dim qb:codeList [] . }\n}"
         }
       ],
       "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/7cf649ab-d5b2-4614-9fd0-5f7a0f0a7eef/configuration"
