@@ -1,6 +1,6 @@
 # FDPtoRDF
 
-The **FDPtoRDF.jsonld** file is a [LinkedPipes] pipeline fragment. It takes a [Fiscal Data Package] (FDP) .jsonld descriptor as input, transforms the FDP into RDF OBEU representation and stores the result into a predefined triple-store.
+The **FDPtoRDF.jsonld** file is a [LinkedPipes] pipeline fragment. It takes a [Fiscal Data Package] .jsonld descriptor as input, transforms the FDP into RDF OBEU representation and stores the result into a predefined triple-store.
 
 ## Installation
 
@@ -40,6 +40,7 @@ The input of the pipeline is a .jsonld FDP descriptor file sent in the POST requ
 ```
     "@context": “http://schemas.frictionlessdata.io/fiscal-data-package.jsonld”,
 ```
+*See [examples folder](documentation/examples) for example .jsonld descriptors.*
 ### Output
 
 The pipeline stores the resulting RDF into a triple-store as configured in the Graph Store Protocol component (see Installation). By default, the results are added into an RDF graph with the following IRI:
@@ -48,7 +49,7 @@ The pipeline stores the resulting RDF into a triple-store as configured in the G
     
 *(The next version of the pipeline should support creating a new graph named according to the datapackage name.)*
 
-For debug purposes, the output can be also downloaded through the Detail view of the Pipeline Execution UI in LinkedPipes, e.g. by displaying the "RDF representation of the FDP in a .ttl file" node output file.
+For debug purposes, the output can also be downloaded through the Detail view of the Pipeline Execution UI in LinkedPipes, e.g. by displaying the "RDF representation of the FDP in a .ttl file" node output file.
 
 ## Further documentation
 
