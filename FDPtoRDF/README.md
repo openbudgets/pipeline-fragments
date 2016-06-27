@@ -1,10 +1,10 @@
 # FDPtoRDF
 
-This is a [LinkedPipes] pipeline fragment. It takes a [Fiscal Data Package] (FDP) .jsonld descriptor as input, transforms the FDP into RDF OBEU representation and stores the result into a predefined triple-store.
+The **FDPtoRDF.jsonld** file is a [LinkedPipes] pipeline fragment. It takes a [Fiscal Data Package] (FDP) .jsonld descriptor as input, transforms the FDP into RDF OBEU representation and stores the result into a predefined triple-store.
 
 ## Installation
 
-1. **Import** [the pipeline] into LinkedPipes using the button in the bottom-right corner of the LinkedPipes UI. You can reference to pipeline's GitHub URL directly.
+1. **Import** [the pipeline](https://raw.githubusercontent.com/openbudgets/pipeline-fragments/master/FDPtoRDF/FDPtoRDF.jsonld) into LinkedPipes using the button in the bottom-right corner of the LinkedPipes UI. You can reference to [pipeline's GitHub URL](https://raw.githubusercontent.com/openbudgets/pipeline-fragments/master/FDPtoRDF/FDPtoRDF.jsonld) directly.
 2. Open the pipeline in LinkedPipes and **configure the Graph Store Protocol component** (in the bottom-right corner of the pipeline, the node is highlighted by red). Follow the [component's configuration documentation](http://etl.linkedpipes.com/components/l-graphstoreprotocol) if needed and change the following to appropriate values of the triple-store where you want to store the results:
     - Repository type (Fuseki/Virtuoso/etc.)
     - Graph Store protocol endpoint
@@ -52,7 +52,7 @@ For debug purposes, the output can be also downloaded through the Detail view of
 
 ## Further documentation
 
-See the developer's documentation for details about the FDPtoRDF transformation process. Note that the latest changes in technical details of pipeline input and output are not reflected there, these are described in this file.
+See the [developer's documentation](https://github.com/openbudgets/pipeline-fragments/blob/master/FDPtoRDF/documentation/FDPtoRDFdeveldocumentation.pdf) for details about the FDPtoRDF transformation process. Note that the latest changes in technical details of pipeline input and output are not reflected there, these are described in this file.
 
 [LinkedPipes]: <http://etl.linkedpipes.com/> 
 [Fiscal Data Package]: <http://fiscal.dataprotocols.org/>
