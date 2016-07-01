@@ -8,7 +8,7 @@
     {
       "name": "budget",
       "title": "Budget",
-      "path": "http://protegeserver.cz/files/fdp-normalized/budget.csv",
+      "path": "https://github.com/openbudgets/pipeline-fragments/tree/master/FDPtoRDF/test/test0/budget.csv",
       "schema": {
         "fields": [
           {
@@ -45,7 +45,7 @@
     {
       "name": "entities",
       "title": "Entities",
-      "path": "http://protegeserver.cz/files/fdp-normalized/entities.csv",
+      "path": "https://github.com/openbudgets/pipeline-fragments/tree/master/FDPtoRDF/test/test0/entities.csv",
       "schema": {
         "fields": [
           {
