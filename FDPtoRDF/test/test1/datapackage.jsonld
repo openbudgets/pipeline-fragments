@@ -236,7 +236,5 @@
       }
     }
   ],
-  "@context":  {
-      "@vocab": "http://test.openbudgets.eu/ontology/fdp#"
-  },
+  "@context":  "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld"
 }
