@@ -25,7 +25,7 @@
           }
         }
       },
-obj      "unknown": {
+     "unknown": {
         "dimensionType": "other",
         "primaryKey": [
           "description"
