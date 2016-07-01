@@ -1,0 +1,114 @@
+{
+  "model": {
+    "dimensions": {
+      "administrator": {
+        "dimensionType": "entity",
+        "primaryKey": [
+          "MS_Name"
+        ],
+        "attributes": {
+          "MS_Name": {
+            "source": "MS Name",
+            "title": "MS Name"
+          }
+        }
+      },
+      "date": {
+        "dimensionType": "datetime",
+        "primaryKey": [
+          "date"
+        ],
+        "attributes": {
+          "date": {
+            "source": "date",
+            "title": "date"
+          }
+        }
+      },
+obj      "unknown": {
+        "dimensionType": "other",
+        "primaryKey": [
+          "description"
+        ],
+        "attributes": {
+          "description": {
+            "source": "description",
+            "title": "description"
+          }
+        }
+      }
+    },
+    "measures": {
+      "EU_Amount": {
+        "source": "EU Amount",
+        "title": "EU Amount",
+        "currency": "EUR"
+      }
+    }
+  },
+  "title": "Data structure definition for the European Structural and Investment Funds of the years 2014-2020_Sample2",
+  "name": "esif2014_sample2",
+  "resources": [
+    {
+      "name": "esif-14_sample2",
+      "format": "csv",
+      "path": "http://wenxion.net/pub/esif-14_sample2.csv",
+      "mediatype": "application/vnd.ms-excel",
+      "bytes": 1254,
+      "dialect": {
+        "csvddfVersion": 1,
+        "delimiter": ",",
+        "lineTerminator": "\n"
+      },
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "title": "MS Name",
+            "name": "MS Name",
+            "slug": "MS_Name",
+            "type": "string",
+            "format": "default",
+            "osType": "administrator:generic:name",
+            "conceptType": "administrator"
+          },
+          {
+            "title": "EU Amount",
+            "name": "EU Amount",
+            "slug": "EU_Amount",
+            "type": "number",
+            "format": "default",
+            "osType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "groupChar": ","
+          },
+          {
+            "title": "date",
+            "name": "date",
+            "slug": "date",
+            "type": "integer",
+            "format": "default",
+            "osType": "date:fiscal-year",
+            "conceptType": "date"
+          },
+          {
+            "title": "description",
+            "name": "description",
+            "slug": "description",
+            "type": "string",
+            "format": "default",
+            "osType": "unknown:string",
+            "conceptType": "unknown"
+          }
+        ],
+        "primaryKey": [
+          "date"
+        ]
+      }
+    }
+  ],
+    "@context": {
+      "@vocab": "http://test.openbudgets.eu/ontology/fdp#"
+  },
+}

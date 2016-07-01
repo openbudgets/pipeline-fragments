@@ -1,0 +1,242 @@
+{
+  "model": {
+    "dimensions": {
+      "administrator": {
+        "dimensionType": "entity",
+        "primaryKey": [
+          "MS"
+        ],
+        "attributes": {
+          "MS": {
+            "source": "MS",
+            "title": "MS"
+          },
+          "MS_Name": {
+            "source": "MS Name",
+            "title": "MS Name"
+          }
+        }
+      },
+      "functional-classification": {
+        "dimensionType": "classification",
+        "primaryKey": [
+          "CCI",
+          "TO"
+        ],
+        "attributes": {
+          "CCI": {
+            "source": "CCI",
+            "title": "CCI"
+          },
+          "Title": {
+            "source": "Title",
+            "title": "Title"
+          },
+          "TO": {
+            "source": "TO",
+            "title": "TO"
+          }
+        },
+        "classificationType": "functional"
+      },
+      "fin-source": {
+        "dimensionType": "other",
+        "primaryKey": [
+          "Fund"
+        ],
+        "attributes": {
+          "Fund": {
+            "source": "Fund",
+            "title": "Fund"
+          }
+        }
+      },
+      "unknown": {
+        "dimensionType": "other",
+        "primaryKey": [
+          "EAFRD_MEASURE"
+        ],
+        "attributes": {
+          "EAFRD_MEASURE": {
+            "source": "EAFRD MEASURE",
+            "title": "EAFRD MEASURE"
+          }
+        }
+      },
+      "date": {
+        "dimensionType": "datetime",
+        "primaryKey": [
+          "date"
+        ],
+        "attributes": {
+          "date": {
+            "source": " date",
+            "title": " date"
+          }
+        }
+      }
+    },
+    "measures": {
+      "EU_Amount": {
+        "source": "EU Amount",
+        "title": "EU Amount",
+        "currency": "EUR",
+        "direction": "revenue"
+      },
+      "National_Amount": {
+        "source": "National Amount",
+        "title": "National Amount",
+        "currency": "EUR",
+        "direction": "revenue"
+      },
+      "Total_Amount": {
+        "source": "Total Amount",
+        "title": "Total Amount",
+        "currency": "EUR",
+        "direction": "revenue"
+      }
+    }
+  },
+  "fiscalPeriod": {
+    "start": "2014-01-01"
+  },
+  "title": "Data structure definition for the European Structural and Investment Funds of the years 2014-2020",
+  "name": "esif2014",
+  "resources": [
+    {
+      "name": "ESIF-14_sample1",
+      "format": "csv",
+      "path": "http://wenxion.net/pub/ESIF-14_sample1.csv",
+      "mediatype": "application/vnd.ms-excel",
+      "bytes": 1118,
+      "dialect": {
+        "csvddfVersion": 1,
+        "delimiter": ",",
+        "lineTerminator": "\n"
+      },
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "title": "MS",
+            "name": "MS",
+            "slug": "MS",
+            "type": "string",
+            "format": "default",
+            "osType": "administrator:generic:id",
+            "conceptType": "administrator"
+          },
+          {
+            "title": "MS Name",
+            "name": "MS Name",
+            "slug": "MS_Name",
+            "type": "string",
+            "format": "default",
+            "osType": "administrator:generic:name",
+            "conceptType": "administrator"
+          },
+          {
+            "title": "CCI",
+            "name": "CCI",
+            "slug": "CCI",
+            "type": "string",
+            "format": "default",
+            "osType": "functional-classification:generic:code",
+            "conceptType": "functional-classification"
+          },
+          {
+            "title": "Title",
+            "name": "Title",
+            "slug": "Title",
+            "type": "string",
+            "format": "default",
+            "osType": "functional-classification:generic:description",
+            "conceptType": "functional-classification"
+          },
+          {
+            "title": "Fund",
+            "name": "Fund",
+            "slug": "Fund",
+            "type": "string",
+            "format": "default",
+            "osType": "fin-source:generic:code",
+            "conceptType": "fin-source"
+          },
+          {
+            "title": "TO",
+            "name": "TO",
+            "slug": "TO",
+            "type": "string",
+            "format": "default",
+            "osType": "functional-classification:generic:level1:code:full",
+            "conceptType": "functional-classification"
+          },
+          {
+            "title": "EAFRD MEASURE",
+            "name": "EAFRD MEASURE",
+            "slug": "EAFRD_MEASURE",
+            "type": "string",
+            "format": "default",
+            "osType": "unknown:string",
+            "conceptType": "unknown"
+          },
+          {
+            "title": "EU Amount",
+            "name": "EU Amount",
+            "slug": "EU_Amount",
+            "type": "number",
+            "format": "default",
+            "osType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "groupChar": ","
+          },
+          {
+            "title": "National Amount",
+            "name": "National Amount",
+            "slug": "National_Amount",
+            "type": "number",
+            "format": "default",
+            "osType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "groupChar": ","
+          },
+          {
+            "title": "Total Amount",
+            "name": "Total Amount",
+            "slug": "Total_Amount",
+            "type": "number",
+            "format": "default",
+            "osType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "groupChar": ","
+          },
+          {
+            "title": " date",
+            "name": " date",
+            "slug": "date",
+            "type": "integer",
+            "format": "default",
+            "osType": "date:fiscal-year",
+            "conceptType": "date"
+          },
+	  {
+            "name": "description",
+            "type": "string"
+          }
+        ],
+        "primaryKey": [
+          "MS",
+          "CCI",
+          "TO",
+          " date"
+        ]
+      }
+    }
+  ],
+  "@context":  {
+      "@vocab": "http://test.openbudgets.eu/ontology/fdp#"
+  },
+}
