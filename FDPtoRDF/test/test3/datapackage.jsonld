@@ -1,5 +1,6 @@
 {
-  "@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld",
+  "@context": {
+      "@vocab": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld"},
   "name": "my-openspending-datapackage",
   "title": "My OpenSpending Data Package",
   "resources": [
