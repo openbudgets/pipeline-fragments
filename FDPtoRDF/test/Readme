@@ -1,0 +1,6 @@
+test0/ contains the first test samples provided by Marek
+test1/ uses a sample csv, part of the ESIF-2014 dataset, adding a date column
+test2/ uses a sample csv, part of the ESIF-2014 dataset, adding a date column
+test3/ uses a sample csv, by changing files in test0
+
+
