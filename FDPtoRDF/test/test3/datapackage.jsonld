@@ -7,7 +7,7 @@
     {
       "name": "budget",
       "title": "Budget",
-      "path": "https://github.com/openbudgets/pipeline-fragments/blob/master/FDPtoRDF/test/test3/budget.csv",
+      "path": "https://github.com/openbudgets/pipeline-fragments/tree/master/FDPtoRDF/test/test3/budget.csv",
       "schema": {
         "fields": [
           {
@@ -44,7 +44,7 @@
     {
       "name": "entities",
       "title": "Entities",
-      "path": "https://github.com/openbudgets/pipeline-fragments/blob/master/FDPtoRDF/test/test3/entities.csv",
+      "path": "https://github.com/openbudgets/pipeline-fragments/tree/master/FDPtoRDF/test/test3/entities.csv",
       "schema": {
         "fields": [
           {
