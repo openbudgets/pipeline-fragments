@@ -236,5 +236,7 @@
       }
     }
   ],
-  "@context":  "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld"
+  "@context":  {
+      "@vocab": "http://schemas.frictionlessdata.io/fiscal-data-package#"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "@context":  {
-      "@vocab":"http://schemas.frictionlessdata.io/fiscal-data-package.jsonld#"
+      "@vocab":"http://test.openbudgets.eu/ontology/fdp#"
 	},
   "name": "my-openspending-datapackage",
   "title": "My OpenSpending Data Package",
@@ -8,7 +8,7 @@
     {
       "name": "budget",
       "title": "Budget",
-      "path": "http://wenxion.net/pub/fdp2rdf/marek/budget.csv",
+      "path": "http://wenxion.net/pub/fdp2rdf/column/budget_age.csv",
       "schema": {
         "fields": [
           {
@@ -27,6 +27,10 @@
           {
             "name": "payee",
             "type": "string"
+          },
+          {
+           "name": "age",
+           "type": "number"
           }
         ],
         "primaryKey": "id"
@@ -45,7 +49,7 @@
     {
       "name": "entities",
       "title": "Entities",
-      "path": "http://wenxion.net/pub/fdp2rdf/marek/entities.csv",
+      "path": "http://wenxion.net/pub/fdp2rdf/column/entities_3.csv",
       "schema": {
         "fields": [
           {

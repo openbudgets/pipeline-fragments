@@ -1,6 +1,6 @@
 {
   "@context":  {
-      "@vocab":"http://schemas.frictionlessdata.io/fiscal-data-package.jsonld#"
+      "@vocab": "http://schemas.frictionlessdata.io/fiscal-data-package#"
 	},
   "name": "my-openspending-datapackage",
   "title": "My OpenSpending Data Package",
@@ -35,7 +35,7 @@
         {
           "fields": "payee",
           "reference": {
-            "datapackage": "my-openspending-datapackage-1",
+            "datapackage": "my-openspending-datapackage",
             "resource": "entities",
             "fields": "id"
           }
