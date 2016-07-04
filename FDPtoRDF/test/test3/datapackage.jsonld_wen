@@ -2,13 +2,13 @@
   "@context":  {
       "@vocab":"http://schemas.frictionlessdata.io/fiscal-data-package.jsonld#"
 	},
-  "name": "my-openspending-datapackage",
-  "title": "My OpenSpending Data Package",
+  "name": "my-openspending-datapackage-1",
+  "title": "My OpenSpending Data Package 1",
   "resources": [
     {
       "name": "budget",
       "title": "Budget",
-      "path": "http://wenxion.net/pub/fdp2rdf/marek/budget.csv",
+      "path": "http://wenxion.net/pub/budget.csv",
       "schema": {
         "fields": [
           {
@@ -45,7 +45,7 @@
     {
       "name": "entities",
       "title": "Entities",
-      "path": "http://wenxion.net/pub/fdp2rdf/marek/entities.csv",
+      "path": "http://wenxion.net/pub/entities.csv",
       "schema": {
         "fields": [
           {
