@@ -45,11 +45,11 @@ The input of the pipeline is a .jsonld FDP descriptor file sent in the POST requ
 *See [examples folder](documentation/examples) for example .jsonld descriptors.*
 ### Output
 
-The pipeline stores the resulting RDF into a triple-store as configured in the Graph Store Protocol component (see Installation). By default, the results are added into an RDF graph with the following IRI:
+The pipeline stores the resulting RDF into a triple-store as configured in the Graph Store Protocol component (see Installation). By default, a new graph is created for the output and named according to the Data Package name, the IRI looks as follows:
 
-    http://data.openbudgets.eu/fdp-datasets
+    http://data.openbudgets.eu/resource/graph/[DataPackage name]
     
-*(The next version of the pipeline should support creating a new graph named according to the datapackage name.)*
+If the graph already exists, it is overwritten.
 
 For debug purposes, the output can also be downloaded through the Detail view of the Pipeline Execution UI in LinkedPipes, e.g. by displaying the "RDF representation of the FDP in a .ttl file" node output file.
 
