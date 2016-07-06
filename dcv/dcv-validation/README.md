@@ -21,8 +21,8 @@ Pipeline fragment that validates [Data Cube Vocabulary](https://www.w3.org/TR/vo
 
 ## Configuration
 
-No configuration required.
+If the validated pipeline reuses component properties defined by the core [OpenBudgets.eu data model](https://github.com/openbudgets/data-model), it must be available in the named graph `http://data.openbudgets.eu/ontology` in the configured RDF store (uses <http://obeu.vse.cz:8890/sparql> by default). You can use [this pipeline fragment](https://github.com/openbudgets/pipeline-fragments/tree/master/obeu/load-obeu) to load the OpenBudgets.eu data model into your SPARQL endpoint.
 
 ## Prerequisites
 
-The validated dataset must be in the DCV normal form. You can transform it to the normal form using the [DCV normalization pipeline fragment](https://github.com/openbudgets/pipeline-fragments/tree/master/dcv/dcv-normalization). If the validated pipeline reuses component properties defined by the core [OpenBudgets.eu data model](https://github.com/openbudgets/data-model), it must be available in the named graph `http://data.openbudgets.eu/ontology` in the configured RDF store (uses <http://obeu.vse.cz:8890/sparql> by default).
+The validated dataset must be in the DCV normal form. You can transform it to the normal form using the [DCV normalization pipeline fragment](https://github.com/openbudgets/pipeline-fragments/tree/master/dcv/dcv-normalization).
