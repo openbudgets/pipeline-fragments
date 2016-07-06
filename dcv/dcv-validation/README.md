@@ -21,7 +21,7 @@ Pipeline fragment that validates [Data Cube Vocabulary](https://www.w3.org/TR/vo
 
 ## Configuration
 
-If the validated pipeline reuses component properties defined by the core [OpenBudgets.eu data model](https://github.com/openbudgets/data-model), it must be available in the named graph `http://data.openbudgets.eu/ontology` in the configured RDF store (uses <http://obeu.vse.cz:8890/sparql> by default). You can use [this pipeline fragment](https://github.com/openbudgets/pipeline-fragments/tree/master/obeu/load-obeu) to load the OpenBudgets.eu data model into your SPARQL endpoint.
+If the validated dataset reuses component properties defined by the core [OpenBudgets.eu data model](https://github.com/openbudgets/data-model), the core data model must be available in the named graph `http://data.openbudgets.eu/ontology` in the configured RDF store (uses <http://obeu.vse.cz:8890/sparql> by default). You can use [this pipeline fragment](https://github.com/openbudgets/pipeline-fragments/tree/master/obeu/load-obeu) to load the OpenBudgets.eu data model into your SPARQL endpoint.
 
 ## Prerequisites
 
