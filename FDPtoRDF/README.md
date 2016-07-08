@@ -15,7 +15,7 @@ The **FDPtoRDF.jsonld** file is a [LinkedPipes] pipeline fragment. It takes a [F
 
 ## Usage
 
-The pipeline is executed through a HTTP POST request to its URL. The POST has to include the FDP .jsonld descriptor. The resulting RDF is stored into a triple-store as configured in the pipeline. The URL for pipeline execution looks like this:
+The pipeline is executed through a HTTP POST request to its URL. The POST has to include either the FDP .jsonld descriptor or a .jsonld file with a URL of the .jsonld descriptor. The resulting RDF is stored into a triple-store as configured in the pipeline. The URL for pipeline execution looks like this:
     
     http://[your LinkedPipes server]/resources/executions?pipeline=http://[your LinkedPipes server]/resources/pipelines/created-[pipeline timestamp]
     
@@ -33,8 +33,11 @@ can be executed through the following command using CURL:
 The details about the execution can then be seen in the Executions view of LinkedPipes UI.
 
 ### Input
+The pipeline uses a .jsonld FDP descriptor as the main input. It can be either POSTed to it directly, or in the form of a .jsonld file containing its URL.
 
-The input of the pipeline is a .jsonld FDP descriptor file sent in the POST request (datapackage.jsonld in the CURL example above). The file must 
+**POSTing FDP descriptor directly:**
+The first option of input of the pipeline is a .jsonld FDP descriptor file sent in the POST request (datapackage.jsonld in the CURL example above). The file must 
+- be named 'datapackage.jsonld'
 - correspond to the [FDP descriptor specification](http://fiscal.dataprotocols.org/spec/#descriptor--datapackagejson) and in addition to it:
 - have the .jsonld extension
 - all references to CSV data files (resources' paths) in it must be dereferencable URLs
@@ -43,6 +46,22 @@ The input of the pipeline is a .jsonld FDP descriptor file sent in the POST requ
     "@context": “http://schemas.frictionlessdata.io/fiscal-data-package.jsonld”,
 ```
 *See [examples folder](documentation/examples) for example .jsonld descriptors.*
+
+**POSTing package-url.jsonld with a URL of the FDP descriptor:** The second option is to POST a file named *'package-url.jsonld'* having the URL of the FDP descriptor as a value of the schema:url property. See the example below:
+```json
+{
+  "@context": {
+    "@vocab": "http://schema.org/"
+  },
+  "url": "http://protegeserver.cz/files/fdp-example-normalized/datapackage.jsonld"
+}
+```
+The FDP descriptor file must fulfill the abovementioned requirements, except that 
+- it can have arbitrary name
+- references to CSV data files (resources' paths) in it can be either **absolute URLs** or **URLs relative** to the URL of the FDP descriptor ('http://protegeserver.cz/files/fdp-example-normalized/' in the example above)
+
+See a [sample package-url.jsonld](samples/1/package-url.jsonld) for further details.
+
 ### Output
 
 The pipeline stores the resulting RDF into a triple-store as configured in the Graph Store Protocol component (see Installation). By default, a new graph is created for the output and named according to the Data Package name, the IRI looks as follows:

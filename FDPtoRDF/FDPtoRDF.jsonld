@@ -1812,8 +1812,7 @@
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/components/ff6ddd55-da00-4dc7-9728-44670452445e/configuration"
           },
-          "http://linkedpipes.com/ontology/color": "#ff0000",
-          "http://linkedpipes.com/ontology/disabled": true
+          "http://linkedpipes.com/ontology/color": "#ff0000"
         },
         {
           "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/connection/b912225e-5fab-4e24-b194-bcef1c2f6954",
