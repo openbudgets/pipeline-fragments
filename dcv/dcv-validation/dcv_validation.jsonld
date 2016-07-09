@@ -344,26 +344,12 @@
               "@id": "http://localhost:8080/resources/components/t-sparqlUpdate"
             }
           ],
-          "http://linkedpipes.com/ontology/x": 300,
-          "http://linkedpipes.com/ontology/y": 160,
+          "http://linkedpipes.com/ontology/x": -500,
+          "http://linkedpipes.com/ontology/y": 300,
           "http://purl.org/dc/terms/description": "Delete abstract properties",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/9739f133-78eb-4eca-ba29-e922cfa49123/configuration"
           }
-        },
-        {
-          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/ee258aa7-d02e-4164-8823-5af069f00cf8",
-          "@type": [
-            "http://linkedpipes.com/ontology/Connection"
-          ],
-          "http://linkedpipes.com/ontology/sourceComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/9739f133-78eb-4eca-ba29-e922cfa49123"
-          },
-          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
-          "http://linkedpipes.com/ontology/targetComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/50152952-2cf5-4fa9-a297-cf9c1620829e"
-          },
-          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/0c41fa45-d70e-4b7e-ab0d-6fb2c9f6650b",
@@ -376,8 +362,8 @@
               "@id": "http://localhost:8080/resources/components/e-sparqlEndpoint"
             }
           ],
-          "http://linkedpipes.com/ontology/x": 40,
-          "http://linkedpipes.com/ontology/y": 160,
+          "http://linkedpipes.com/ontology/x": -780,
+          "http://linkedpipes.com/ontology/y": 300,
           "http://purl.org/dc/terms/description": "Load OBEU data model",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/0c41fa45-d70e-4b7e-ab0d-6fb2c9f6650b/configuration"
@@ -394,20 +380,6 @@
           "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
           "http://linkedpipes.com/ontology/targetComponent": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/9739f133-78eb-4eca-ba29-e922cfa49123"
-          },
-          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
-        },
-        {
-          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/b7ce0afa-92bd-41b9-8f30-5d8d0951a3a5",
-          "@type": [
-            "http://linkedpipes.com/ontology/Connection"
-          ],
-          "http://linkedpipes.com/ontology/sourceComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/9739f133-78eb-4eca-ba29-e922cfa49123"
-          },
-          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
-          "http://linkedpipes.com/ontology/targetComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/7cf649ab-d5b2-4614-9fd0-5f7a0f0a7eef"
           },
           "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
         },
@@ -1125,8 +1097,8 @@
           "http://linkedpipes.com/ontology/template": {
             "@id": "http://localhost:8080/resources/components/q-sparqlAsk"
           },
-          "http://linkedpipes.com/ontology/x": -220,
-          "http://linkedpipes.com/ontology/y": 460,
+          "http://linkedpipes.com/ontology/x": -260,
+          "http://linkedpipes.com/ontology/y": 300,
           "http://purl.org/dc/terms/description": "Has DSD?",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/de5d6d96-f92a-4d5a-9483-9281a2a0e2cd/configuration"
@@ -1142,7 +1114,7 @@
             "@id": "http://localhost:8080/resources/components/q-sparqlAsk"
           },
           "http://linkedpipes.com/ontology/x": -80,
-          "http://linkedpipes.com/ontology/y": 460,
+          "http://linkedpipes.com/ontology/y": 300,
           "http://purl.org/dc/terms/description": "Has components?",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/b7255d71-f4a5-4fd3-9a67-4c1026bf3a26/configuration"
@@ -1158,7 +1130,7 @@
             "@id": "http://localhost:8080/resources/components/q-sparqlAsk"
           },
           "http://linkedpipes.com/ontology/x": 120,
-          "http://linkedpipes.com/ontology/y": 460,
+          "http://linkedpipes.com/ontology/y": 300,
           "http://purl.org/dc/terms/description": "Has code lists?",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e22cf516-cd23-44ed-8780-b45a42947151/configuration"
@@ -1174,51 +1146,8 @@
             "@id": "http://localhost:8080/resources/components/t-singleGraphUnion"
           },
           "http://linkedpipes.com/ontology/x": 280,
-          "http://linkedpipes.com/ontology/y": 620,
-          "http://purl.org/dc/terms/description": "Add input dataset",
-          "http://linkedpipes.com/ontology/color": "#ff0000"
-        },
-        {
-          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/cdd8ce97-c1f1-4362-86ec-aaa08606f6d7",
-          "@type": [
-            "http://linkedpipes.com/ontology/Connection"
-          ],
-          "http://linkedpipes.com/ontology/sourceComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/d30b04ff-113f-4d86-9418-c4d6d63b6aba"
-          },
-          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
-          "http://linkedpipes.com/ontology/targetComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/de5d6d96-f92a-4d5a-9483-9281a2a0e2cd"
-          },
-          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
-        },
-        {
-          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/2dd26495-185d-47f7-af3f-84a1a52b9782",
-          "@type": [
-            "http://linkedpipes.com/ontology/Connection"
-          ],
-          "http://linkedpipes.com/ontology/sourceComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/d30b04ff-113f-4d86-9418-c4d6d63b6aba"
-          },
-          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
-          "http://linkedpipes.com/ontology/targetComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/b7255d71-f4a5-4fd3-9a67-4c1026bf3a26"
-          },
-          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
-        },
-        {
-          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/6f583d00-6c0a-4288-b70b-25c562bf006a",
-          "@type": [
-            "http://linkedpipes.com/ontology/Connection"
-          ],
-          "http://linkedpipes.com/ontology/sourceComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/d30b04ff-113f-4d86-9418-c4d6d63b6aba"
-          },
-          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
-          "http://linkedpipes.com/ontology/targetComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e22cf516-cd23-44ed-8780-b45a42947151"
-          },
-          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+          "http://linkedpipes.com/ontology/y": 580,
+          "http://purl.org/dc/terms/description": "Dispatch to ICs"
         },
         {
           "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/d78257ac-dc56-41d4-9387-83bd7e51ca5b",
@@ -1765,7 +1694,7 @@
             "@id": "http://localhost:8080/resources/components/q-sparqlAsk"
           },
           "http://linkedpipes.com/ontology/x": 300,
-          "http://linkedpipes.com/ontology/y": 460,
+          "http://linkedpipes.com/ontology/y": 300,
           "http://purl.org/dc/terms/description": "Has normal form?",
           "http://linkedpipes.com/ontology/configurationGraph": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/70b6cfd7-3b81-4a5a-bc36-c6220fda5861/configuration"
@@ -1784,16 +1713,126 @@
           }
         },
         {
-          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/73685999-8546-4e56-9e05-82e5914f13fe",
+          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e9fb4c06-0345-4a23-a965-95e32522040a",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Union",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/t-singleGraphUnion"
+          },
+          "http://linkedpipes.com/ontology/x": -280,
+          "http://linkedpipes.com/ontology/y": 580,
+          "http://purl.org/dc/terms/description": "Add input dataset",
+          "http://linkedpipes.com/ontology/color": "#ff0000"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/fba2cdfb-b47d-43e5-847a-7889a9dcd57e",
           "@type": [
             "http://linkedpipes.com/ontology/Connection"
           ],
           "http://linkedpipes.com/ontology/sourceComponent": {
-            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/d30b04ff-113f-4d86-9418-c4d6d63b6aba"
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/9739f133-78eb-4eca-ba29-e922cfa49123"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e9fb4c06-0345-4a23-a965-95e32522040a"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/36c5c03c-d8a4-4e4a-802c-81bb97a9723c",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e9fb4c06-0345-4a23-a965-95e32522040a"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/b7255d71-f4a5-4fd3-9a67-4c1026bf3a26"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/193514ad-3726-4ea2-b9d8-12bf3dfab2b4",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e9fb4c06-0345-4a23-a965-95e32522040a"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e22cf516-cd23-44ed-8780-b45a42947151"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/f298397e-5e9a-45e2-91f5-78425d7d4df5",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e9fb4c06-0345-4a23-a965-95e32522040a"
           },
           "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
           "http://linkedpipes.com/ontology/targetComponent": {
             "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/70b6cfd7-3b81-4a5a-bc36-c6220fda5861"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/1ba87420-aa65-4f7f-a035-b47fa72b353b",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e9fb4c06-0345-4a23-a965-95e32522040a"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/de5d6d96-f92a-4d5a-9483-9281a2a0e2cd"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/91366bd4-e86f-4f09-9af9-bd33baeaa7e0",
+          "@type": [
+            "http://linkedpipes.com/ontology/RunAfter"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/70b6cfd7-3b81-4a5a-bc36-c6220fda5861"
+          },
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/d30b04ff-113f-4d86-9418-c4d6d63b6aba"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/5a49098d-da7a-46e2-9ad6-0a6963c82fbb",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/e9fb4c06-0345-4a23-a965-95e32522040a"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/d30b04ff-113f-4d86-9418-c4d6d63b6aba"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/connection/cfcbc648-c959-4cc6-aec5-aa575a91d206",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/77964094-393b-4482-953e-faefdecf5b2e"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462542088184/components/7550bf7f-c47d-48fa-b7e2-1dc901c56ea7"
           },
           "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
         }
