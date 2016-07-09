@@ -1,0 +1,6 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/"
+  },
+  "url": "http://protegeserver.cz/files/fdp-example-normalized/datapackage.jsonld"
+}
