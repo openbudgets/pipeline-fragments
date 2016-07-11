@@ -7,7 +7,7 @@
           "@type": [
             "http://linkedpipes.com/ontology/Pipeline"
           ],
-          "http://www.w3.org/2004/02/skos/core#prefLabel": "FDP to RDF v0.3.0 multiple measures"
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "FDP to RDF v0.3.1 files to SCP"
         },
         {
           "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/components/a60814ba-3612-4e87-8fca-fb3576d51a2d",
@@ -2546,6 +2546,36 @@
           ]
         },
         {
+          "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/components/d41881e5-09e0-4089-be38-2b2add179e61",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "Files to SCP",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:9080/resources/components/l-filesToScp"
+          },
+          "http://linkedpipes.com/ontology/x": 2400,
+          "http://linkedpipes.com/ontology/y": 20,
+          "http://linkedpipes.com/ontology/color": "#ff0000",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/components/d41881e5-09e0-4089-be38-2b2add179e61/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/connection/c7195821-4400-49e6-a38a-54f0a0dc9dfd",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/components/5256b18f-c13a-48c2-bfef-18293fb2f050"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputFile",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/components/d41881e5-09e0-4089-be38-2b2add179e61"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "FilesInput"
+        },
+        {
           "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/connection/e022c81c-2ce4-49e8-a754-ddef106513e0/vertex/1",
           "@type": "http://linkedpipes.com/ontology/Vertex",
           "http://linkedpipes.com/ontology/x": 4100,
@@ -3248,6 +3278,23 @@
         }
       ],
       "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/components/b9bbe38b-5dfb-45e9-b157-bbbcb5256e43/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/l-filesToScp#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#userName": "",
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#password": "",
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#host": "",
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#port": 22,
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#targetDirectory": "~/upload/",
+          "http://plugins.linkedpipes.com/ontology/l-filesToScp#createDirectory": true
+        }
+      ],
+      "@id": "http://localhost:9080/resources/pipelines/created-1467969833381/components/d41881e5-09e0-4089-be38-2b2add179e61/configuration"
     }
   ]
 }

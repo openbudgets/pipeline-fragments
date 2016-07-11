@@ -11,7 +11,8 @@ The **FDPtoRDF.jsonld** file is a [LinkedPipes] pipeline fragment. It takes a [F
     - Repository type (Fuseki/Virtuoso/etc.)
     - Graph Store protocol endpoint
     - User name and password
-3. Don't forget to click the **"apply changes"** and then **"save"** the whole pipeline (bottom-left button in the pipeline editor).
+3. Configure the **Files to SCP component** (also highlighted by red, just above the Graph Store Protocol component). Follow the [component's configuration documentation](http://etl.linkedpipes.com/components/l-filestoscp) if needed. The component can be disabled if not needed: by selecting the component node and clicking on the upper right button above it. This applies to the Graph Store Protocol as well.
+4. Don't forget to click the **"apply changes"** and then **"save"** the whole pipeline (bottom-left button in the pipeline editor).
 
 ## Usage
 
@@ -64,11 +65,14 @@ See a [sample package-url.jsonld](samples/1/package-url.jsonld) for further deta
 
 ### Output
 
+**To a triplestore:**
 The pipeline stores the resulting RDF into a triple-store as configured in the Graph Store Protocol component (see Installation). By default, a new graph is created for the output and named according to the Data Package name, the IRI looks as follows:
 
     http://data.openbudgets.eu/resource/graph/[DataPackage name]
     
 If the graph already exists, it is overwritten.
+
+**To a filestore:** The pipeline can also store the resulting RDF in a single file using the Turtle syntax. The file is sent through SCP protocol as configured in the Files to SCP component (see Installation).
 
 For debug purposes, the output can also be downloaded through the Detail view of the Pipeline Execution UI in LinkedPipes, e.g. by displaying the "RDF representation of the FDP in a .ttl file" node output file.
 
