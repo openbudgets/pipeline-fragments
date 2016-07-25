@@ -1,0 +1,85 @@
+{
+  "@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld",
+   "name": "my-openspending-datapackage",
+  "title": "My OpenSpending Data Package",
+  "resources": [
+    {
+      "name": "budget",
+      "title": "Budget",
+      "path": "https://github.com/openspending/fiscal-data-package/raw/master/examples/entities-denormalized/budget.csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "budget",
+            "type": "number",
+            "format": "currency"
+          },
+          {
+            "name": "budget_date",
+            "type": "date"
+          },
+          {
+            "name": "payee_id",
+            "type": "string"
+          },
+          {
+            "name": "payee_name",
+            "type": "string"
+          },
+          {
+            "name": "payor_id",
+            "type": "string"
+          },
+          {
+            "name": "payor_name",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "model": {
+    "measures": {
+      "amount": {
+        "source": "budget",
+        "currency": "USD",
+        "factor": 1
+      }
+    },
+    "dimensions": {
+      "date": {
+        "dimensionType": "datetime",
+        "attributes": {
+          "year": {
+            "source": "budget_date"
+          }
+        },
+        "primaryKey": "year"
+      },
+      "payee": {
+        "dimensionType": "entity",
+        "attributes": {
+          "id": {
+            "source": "payee_id"
+          },
+          "title": {
+            "source": "payee_name"
+          }
+        },
+        "primaryKey": "id"
+      },
+      "payor": {
+        "dimensionType": "entity",
+        "attributes": {
+          "id": {
+            "source": "payor_id"
+          },
+          "title": {
+            "source": "payor_name"
+          }
+        },
+        "primaryKey": "id"
+      }
+    }
+  }
+}
