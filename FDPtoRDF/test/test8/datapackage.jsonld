@@ -1,0 +1,178 @@
+{
+  "@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld",
+  "name": "au-budget",
+  "title": "Australian Budget",
+  "homepage": "",
+  "version": "0.1.0",
+  "resources": [
+    {
+      "name": "201505181230budget1516",
+      "path": "https://raw.githubusercontent.com/openspending/fiscal-data-package-demos/master/au-budget/data/201505181230budget1516.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 949719,
+      "schema": {
+        "fields": [
+          {
+            "name": "Portfolio",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Department/Agency",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Outcome",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Program",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Expense type",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Appropriation type",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "2014-15",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "2015-16",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "2016-17",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "2017-18",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "2018-19",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "Source document",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Source table",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "URL",
+            "type": "string",
+            "description": ""
+          }
+        ]
+      }
+    }
+  ],
+  "model": {
+    "measures": {
+      "2014-15": {
+        "currency": "AUD",
+        "source": "2014-15"
+      },
+      "2015-16": {
+        "currency": "AUD",
+        "source": "2015-16"
+      },
+      "2016-17": {
+        "currency": "AUD",
+        "source": "2016-17"
+      },
+      "2017-18": {
+        "currency": "AUD",
+        "source": "2017-18"
+      },
+      "2018-19": {
+        "currency": "AUD",
+        "source": "2018-19"
+      }
+    },
+    "dimensions": {
+      "portfolio": {
+        "attributes": {
+          "portfolio": {
+            "source": "Portfolio"
+          }
+        },
+        "primaryKey": "portfolio"
+      },
+      "Department/Agency": {
+        "attributes": {
+          "department-agency": {
+            "source": "Department/Agency"
+          }
+        },
+        "primaryKey": "department-agency"
+      },
+      "Outcome": {
+        "attributes": {
+          "outcome": {
+            "source": "Outcome"
+          }
+        },
+        "primaryKey": "outcome"
+      },
+      "Program": {
+        "attributes": {
+          "program": {
+            "source": "Program"
+          }
+        },
+        "primaryKey": "program"
+      },
+      "Expense type": {
+        "attributes": {
+          "expense-type": {
+            "source": "Expense type"
+          }
+        },
+        "primaryKey": "expense-type"
+      },
+      "Appropriation type": {
+        "attributes": {
+          "appropriation-type": {
+            "source": "Appropriation type"
+          }
+        },
+        "primaryKey": "appropriation-type"
+      },
+      "Description": {
+        "attributes": {
+          "description": {
+            "source": "Description"
+          }
+        },
+        "primaryKey": "description"
+      }
+    }
+  },
+  "description": ""
+}

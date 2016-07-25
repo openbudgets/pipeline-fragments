@@ -6,7 +6,7 @@
     {
       "name": "budget",
       "title": "Budget",
-      "path": "budget.csv",
+      "path": "https://raw.githubusercontent.com/openbudgets/pipeline-fragments/master/FDPtoRDF/test/test7/budget.csv",
       "schema": {
         "fields": [
           {
@@ -14,12 +14,12 @@
             "type": "string"
           },
           {
-            "name": "amount",
+            "name": "budget",
             "type": "number",
             "format": "currency"
           },
           {
-            "name": "date",
+            "name": "budget_date",
             "type": "date"
           },
           {
@@ -43,7 +43,7 @@
     {
       "name": "entities",
       "title": "Entities",
-      "path": "entities.csv",
+      "path": "https://raw.githubusercontent.com/openbudgets/pipeline-fragments/master/FDPtoRDF/test/test7/entities.csv",
       "schema": {
         "fields": [
           {
@@ -51,7 +51,7 @@
             "type": "string"
           },
           {
-            "name": "title",
+            "name": "name",
             "type": "string"
           },
           {
@@ -76,7 +76,7 @@
         "dimensionType": "datetime",
         "attributes": {
           "year": {            
-            "source": "year"
+            "source": "budget_date"
           }
         },
         "primaryKey": "year"
@@ -90,7 +90,7 @@
           },
           "title": {            
             "resource": "entities",
-            "source": "title"
+            "source": "name"
           },
           "description": {            
             "resource": "entities",
