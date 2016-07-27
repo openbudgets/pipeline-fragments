@@ -3,6 +3,12 @@ test1/ uses a sample csv, part of the ESIF-2014 dataset, adding a date column
 test2/ uses a sample csv, part of the ESIF-2014 dataset, adding a date column
 test3/ uses a sample csv, by changing files in test0
 test4/ the minimal example from FDP spec: http://fiscal.dataprotocols.org/examples/minimal/
-test5/
-
+test5/ the hierarchy example from FDP spec
+test6/ the entities-denormalized example from FDP spec
+test7/ the entities normalized example from FDP spec
+test8/ au-budget from FDP demos: https://github.com/openspending/fiscal-data-package-demos/tree/master/au-budget
+test9/ a sample from armenia-expenses in FDP demos: https://github.com/openspending/fiscal-data-package-demos/tree/master/boost-armenia
+test10/ the whole eu-allocation dataset in FDP demos: https://github.com/openspending/fiscal-data-package-demos/tree/master/eu-allocations-per-ms-2014-2020
+test11/ a sample from eu-beneficiaries: https://github.com/openspending/fiscal-data-package-demos/tree/master/eu-beneficiaries-from-eagf-and-the-eafrd-in-slovakia-2014
+test12/ a sample from madrid-municipality: https://github.com/openspending/fiscal-data-package-demos/tree/master/madrid-municipal-gastos
 

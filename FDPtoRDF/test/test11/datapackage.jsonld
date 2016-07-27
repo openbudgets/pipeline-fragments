@@ -1,0 +1,100 @@
+{
+  "@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld",
+   "name": "beneficiaries-from-eagf-and-the-eafrd-in-slovakia-2014",
+  "title": "",
+  "homepage": "",
+  "version": "0.1.0",
+  "resources": [
+    {
+      "name": "slov2014ea_html",
+      "path": "http://protegeserver.cz/files/obeu/eu-bene-sample.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 2306889,
+      "schema": {
+        "fields": [
+          {
+            "name": "Beneficiary",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Postal code",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "Municipality",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Measure *",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Sum (EURO)",
+            "type": "number",
+            "description": ""
+          },
+          {
+            "name": "Year",
+            "type": "integer",
+            "description": ""
+          }
+        ]
+      }
+    }
+  ],
+  "model": {
+    "measures": {
+      "amount": {
+        "source": "Sum (EURO)",
+        "currency": "EUR"
+      }
+    },
+    "dimensions": {
+      "date": {
+        "dimensionType": "datetime",
+        "attributes": {
+          "year": {
+            "source": "Year"
+          }
+        },
+        "primaryKey": "year"
+      },
+      "payee": {
+        "dimensionType": "entity",
+        "attributes": {
+          "title": {
+            "source": "Beneficiary"
+          }
+        },
+        "primaryKey": "title"
+      },
+      "location": {
+        "dimensionType": "location",
+        "attributes": {
+          "code": {
+            "source": "Postal code"
+          },
+          "title": {
+            "source": "Municipality"
+          }
+        },
+        "primaryKey": ["code","title"]
+      },
+      "program": {
+        "dimensionType": "activity",
+        "attributes": {
+          "id": {
+            "source": "Measure *"
+          }
+        },
+        "primaryKey": "id"
+      }
+    }
+  },
+  "description": ""
+}

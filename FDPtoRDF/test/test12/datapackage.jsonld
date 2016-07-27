@@ -1,0 +1,165 @@
+{
+  "@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld",
+   "name": "madrid-municipal-gastos",
+  "title": "Presupuestos municipales 2012-2015",
+  "homepage": "http://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=14f285e4b1204410VgnVCM1000000b205a0aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD",
+  "version": "0.1.0",
+  "countryCode": "ES",
+  "granularity": "aggregated",
+  "fiscalPeriod": {
+    "start": "2012-01-01",
+    "end": "2015-12-31"
+  },
+  "resources": [
+    {
+      "name": "gastos_v40_2012-2015",
+      "path": "http://protegeserver.cz/files/obeu/madrid-sample.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 3483259,
+      "schema": {
+        "fields": [
+          {
+            "name": "AÑO",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "CENTRO",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "DESCRIPCION CENTRO",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "SECCION",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "DESCRIPCION SECCION",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "PROGRAMA",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "DESCRIPCION PROGRAMA",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "CAPITULO",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "DESCRIPCION CAPITULO",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "ECONOMICO",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "DESCRIPCION ECONOMICO",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "IMPORTE",
+            "type": "integer",
+            "description": ""
+          }
+        ]
+      }
+    }
+  ],
+  "model": {
+    "measures": {
+      "amount": {       
+        "source": "IMPORTE",
+        "resource": "gastos_v40_2012-2015",
+        "currency": "EUR",
+        "factor": 1,
+        "direction": "expenditure",
+        "phase": "approved"
+      }
+    },
+    "dimensions": {
+      "date": {
+        "attributes": {
+          "year": {           
+            "source": "AÑO"
+          }
+        },
+        "primaryKey": "year"
+      },
+      "administrative": {
+        "dimensionType": "classification",
+        "classificationType": "administrative",
+        "attributes": { 
+          "CENTRO": {           
+            "source": "CENTRO"
+          },
+          "DESCRIPCION CENTRO": {           
+            "source": "DESCRIPCION CENTRO",
+            "labelfor": "CENTRO"
+          },
+          "SECCION": {           
+            "source": "SECCION",
+            "parent": "CENTRO"
+          },
+          "DESCRIPCION SECCION": {           
+            "source": "DESCRIPCION SECCION",
+            "labelfor": "SECCION"
+          }
+        },
+        "primaryKey": ["CENTRO", "SECCION"]
+      },
+      "program": {
+        "dimensionType": "activity",
+        "attributes": {
+          "PROGRAMA": {
+            "source": "PROGRAMA"
+          },
+          "DESCRIPCION PROGRAMA": {
+            "source": "DESCRIPCION PROGRAMA",
+            "labelfor": "PROGRAMA"
+          }
+        },
+        "primaryKey": "PROGRAMA"
+      },
+      "economic": {
+        "dimensionType": "classification",
+        "classificationType": "economic",
+        "attributes": {
+          "CAPITULO": {
+            "source": "CAPITULO"
+          },
+          "DESCRIPCION CAPITULO": {
+            "source": "DESCRIPCION CAPITULO",
+            "labelfor": "CAPITULO"
+          },
+          "ECONOMICO": {
+            "source": "ECONOMICO",
+            "parent": "CAPITULO"
+          },
+          "DESCRIPCION ECONOMICO": {
+            "source": "DESCRIPCION ECONOMICO",
+            "labelfor": "ECONOMICO"
+          }
+        },
+        "primaryKey": ["CAPITULO", "ECONOMICO"]
+      }
+    }
+  }
+}

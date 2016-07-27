@@ -1,0 +1,72 @@
+{
+  "@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld",
+  "name": "eu_allocations_per_ms_2014_2020",
+  "title": "Total EU Allocations per MS for 2014-2020",
+  "homepage": "https://cohesiondata.ec.europa.eu/EU-Cohesion-Funding/Total-EU-Allocations-per-MS-for-2014-2020-Bar-Char/2u93-tdwn",
+  "version": "0.1.0",
+  "granularity": "aggregated",
+  "countryCode": ["PL","IT","ES","RO","CZ","HU","PT","DE","FR","GR","SK","GB","HR","BG","LT","LV","EE","SI","BE","SE","FI","NL","AT","IE","CY","MT","DK","LU"],
+  "fiscalPeriod": {
+    "start": "2014-01-01",
+    "end": "2020-12-31"
+  },
+  "resources": [
+    {
+      "name": "total_eu_allocations_per_ms_for_2014-2020",
+      "path": "http://protegeserver.cz/files/obeu/total-eu-alloc.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 14108,
+      "schema": {
+        "fields": [
+          {
+            "name": "Country ID",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Fund",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Amount",
+            "type": "integer",
+            "description": ""
+          }
+        ]
+      }
+    }
+  ],
+  "model": {
+    "measures": {
+      "label": {
+        "source": "Amount",
+        "currency": "EUR",
+        "direction": "expenditure",
+        "factor": 1
+      }
+    },
+    "dimensions": {
+      "payee": {
+        "dimensionType": "entity",
+        "attributes": {
+          "label": {
+            "source": "Country ID"
+          }
+        },
+        "primaryKey": "label"
+      },
+      "fund": {
+        "dimensionType": "activity",
+        "attributes": {
+          "label": {
+            "source": "Fund"
+          }
+        },
+        "primaryKey": "label"
+      }
+    }
+  },
+  "description": ""
+}
