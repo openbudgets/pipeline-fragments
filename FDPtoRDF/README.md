@@ -4,6 +4,9 @@
 
 The **FDPtoRDF.jsonld** file is a [LinkedPipes] pipeline fragment. It takes a [Fiscal Data Package] .jsonld descriptor as input, transforms the FDP into RDF OBEU representation and stores the result into a predefined triple-store.
 
+## Prerequisities
+The pipeline uses [LinkedPipes component FDPtoRDF](https://github.com/opendatacz/lp-etl-components/tree/master/t-fdpToRdf), which is not part of LinkedPipes by default. You can deploy it into existing LinkedPipes installation by [downloading it](https://github.com/opendatacz/lp-etl-components/raw/master/t-fdpToRdf/deploy/t-fdpToRdf.zip) and extracting into `<Linked-pipes-directory>/deploy/components/`. Restart LinkedPipes to load the component.
+
 ## Installation
 
 1. **Import** [the pipeline](https://raw.githubusercontent.com/openbudgets/pipeline-fragments/master/FDPtoRDF/FDPtoRDF.jsonld) into LinkedPipes using the button in the bottom-right corner of the LinkedPipes UI. You can reference to [pipeline's GitHub URL](https://raw.githubusercontent.com/openbudgets/pipeline-fragments/master/FDPtoRDF/FDPtoRDF.jsonld) directly.
