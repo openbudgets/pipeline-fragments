@@ -1,0 +1,6 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/"
+  },
+  "url": "https://raw.githubusercontent.com/openbudgets/pipeline-fragments/master/FDPtoRDF/samples/2/package/armenia.jsonld"
+}

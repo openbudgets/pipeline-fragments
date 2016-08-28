@@ -1,0 +1,216 @@
+{
+  "@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld",
+  "countryCode": "AM",
+  "granularity": "aggregated",
+  "name": "boost-armenia",
+  "title": "Armenia BOOST Government Expenditure Database",
+  "fiscalPeriod": {
+    "start": "2006-01-01",
+    "end": "2014-12-31"
+  },
+    "profiles": {
+    "fiscal": "*",
+    "tabular": "*"
+  },
+  "resources": [
+    {
+      "name": "armenia_boost_v1.7_expenditures_2006-2014_en",
+      "path": "armenia.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 26333800,
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "admin",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "econ1",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "econ2",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "econ3",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "econ4",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "func1",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "func2",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "func3",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "program",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "exp_type",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Econ/func",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "transfer",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "approved",
+            "type": "number",
+            "description": ""
+          },
+          {
+            "name": "adjusted",
+            "type": "number",
+            "description": ""
+          },
+          {
+            "name": "executed",
+            "type": "number",
+            "description": ""
+          }
+        ]
+      }
+    }
+  ],
+  "description": "",
+  "model": {
+    "measures": { 
+      "approved_amount": {
+        "source": "approved",
+        "direction": "expenditure",
+        "phase": "approved",
+        "currency": "AMD"
+      },
+      "adjusted_amount": {
+        "source": "adjusted",
+        "direction": "expenditure",
+        "phase": "adjusted",
+        "currency": "AMD"
+      },
+      "executed_amount": {
+        "source": "executed",
+        "direction": "expenditure",
+        "phase": "executed",
+        "currency": "AMD"
+      }
+    },
+    "dimensions": {
+      "date": {
+        "dimensionType": "datetime",
+        "attributes": {
+            "year": {
+              "source": "year"
+            }
+        },
+        "primaryKey": ["year"]
+      },
+      "functional-classification": {
+        "dimensionType": "classification",
+        "classificationType": "functional",
+        "attributes": {
+          "func1": {
+            "source": "func1"
+          },
+          "func2": {
+            "source": "func2",
+            "parent": "func1"
+          },
+          "func3": {
+            "source": "func3",
+            "parent": "func2"
+          }
+        },
+        "primaryKey": ["func1", "func2", "func3"]
+      },
+      "economic-classification": {
+        "dimensionType": "classification",
+        "classificationType": "economic",
+        "attributes": {
+            "econ1": {
+              "source": "econ1"
+            },
+            "econ2": {
+              "source": "econ2",
+              "parent": "econ1"
+            },
+            "econ3": {
+              "source": "econ3",
+              "parent": "econ2"
+            },
+            "econ4": {
+              "source": "econ4",
+              "parent": "econ3"
+            }
+        },
+        "primaryKey": ["econ1", "econ2", "econ3", "econ4"]
+      },
+      "administrative-classification" : {
+        "dimensionType": "classification",
+        "classificationType": "administrative",
+        "attributes": {
+          "admin": {
+            "source": "admin"
+          }
+        },
+        "primaryKey": "admin"
+      },
+      "activity": {
+        "dimensionType": "activity",
+        "attributes": {
+          "program": {
+            "source": "program"
+          }
+        },
+        "primaryKey": "program"
+      },
+      "other": {
+        "dimensionType": "other",
+        "attributes": {
+          "exp_type": {
+            "source": "exp_type"
+          },
+          "econ_func": {
+            "source": "Econ/func"
+          },
+          "transfer": {
+            "source": "transfer"
+          }
+        },
+        "primaryKey": ["exp_type", "econ_func", "transfer"]
+      }
+    }
+  }
+}
