@@ -664,6 +664,48 @@
             "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/f276d4e5-2c13-4476-be08-f9a916dab522"
           },
           "http://linkedpipes.com/ontology/targetBinding": "InputFiles"
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/4f79be94-7e63-474e-ac00-36bbd5222921",
+          "@type": [
+            "http://linkedpipes.com/ontology/Component"
+          ],
+          "http://www.w3.org/2004/02/skos/core#prefLabel": "SPARQL endpoint",
+          "http://linkedpipes.com/ontology/template": {
+            "@id": "http://localhost:8080/resources/components/e-sparqlEndpoint"
+          },
+          "http://linkedpipes.com/ontology/x": 1600,
+          "http://linkedpipes.com/ontology/y": 400,
+          "http://purl.org/dc/terms/description": "Use of deprecated term",
+          "http://linkedpipes.com/ontology/configurationGraph": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/4f79be94-7e63-474e-ac00-36bbd5222921/configuration"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/connection/b5bd7b08-d7ac-4900-8660-010021bcf944",
+          "@type": [
+            "http://linkedpipes.com/ontology/RunAfter"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/a78b4427-a79d-4e13-9861-b47b18b50c79"
+          },
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/4f79be94-7e63-474e-ac00-36bbd5222921"
+          }
+        },
+        {
+          "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/connection/fbc02709-2634-4c7a-8708-d04d996f114b",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/4f79be94-7e63-474e-ac00-36bbd5222921"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputRdf",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/89184d95-c65b-49bc-9580-6c998c18e1a6"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "InputRdf"
         }
       ],
       "@id": "http://localhost:8080/resources/pipelines/created-1462793153362"
@@ -1114,6 +1156,19 @@
         }
       ],
       "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/f276d4e5-2c13-4476-be08-f9a916dab522/configuration"
+    },
+    {
+      "@graph": [
+        {
+          "@id": "http://localhost/resources/configuration",
+          "@type": [
+            "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#Configuration"
+          ],
+          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#query": "PREFIX owl:    <http://www.w3.org/2002/07/owl#>\nPREFIX qb:     <http://purl.org/linked-data/cube#>\nPREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX spin:   <http://spinrdf.org/spin#>\n\nCONSTRUCT {\n  [] a spin:ConstraintViolation ;\n    spin:violationValue ?deprecatedTerm ;\n    rdfs:label \"The term used is deprecated.\"@en .\n}\nWHERE {\n  GRAPH <http://data.openbudgets.eu/ontology> {\n    ?deprecatedTerm owl:deprecated true .\n  }\n  GRAPH <http://data.openbudgets.eu/resource/dataset/validated-dataset> {\n    {\n      [] a ?deprecatedTerm .\n    } UNION {\n      [] ?deprectedTerm [] .\n    }\n  }\n}",
+          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#endpoint": "http://obeu.vse.cz:8890/sparql"
+        }
+      ],
+      "@id": "http://localhost:8080/resources/pipelines/created-1462793153362/components/4f79be94-7e63-474e-ac00-36bbd5222921/configuration"
     }
   ]
 }
