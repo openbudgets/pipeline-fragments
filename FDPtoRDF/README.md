@@ -75,9 +75,9 @@ The pipeline stores the resulting RDF into a triple-store as configured in the G
     
 If the graph already exists, it is overwritten.
 
-**To a filestore:** The pipeline can also store the resulting RDF in files: `metadata.ttl` using the Turtle syntax containing the DSD and dataset definition and `data.nt` containing the observations. The files are sent through SCP protocol as configured in the Files to SCP component (see Installation).
+**To a filestore:** The pipeline can also store the resulting RDF in a file named according to the FDP package name. The file is sent through SCP protocol as configured in the Files to SCP component (see Installation).
 
-For debug purposes, the output can also be downloaded through the Detail view of the Pipeline Execution UI in LinkedPipes, e.g. by displaying the "RDF representation of the FDP in a .ttl file" node output file.
+For debug purposes, the output can also be downloaded through the Detail view of the Pipeline Execution UI in LinkedPipes, e.g. by displaying the "FDP to RDF" node output file.
 
 ## Further documentation
 
