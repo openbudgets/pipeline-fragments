@@ -1,7 +1,7 @@
 # FDP2RDF Developer's Documentation
 
 ## Overview of mappings from the FDP specification
-To make more clear what is mapped and what not, I took the original FDP specification from http://fiscal.dataprotocols.org/spec/ and added comments to parts that are mapped by the pipeline. More clarification can be brought by the examples further below. Only mapped parts of FDP specification are displayed - please compare it with the original specification to see what is not mapped.
+Below, the FDP-to-RDF mappings implemented in the pipeline are shown on an example from http://fiscal.dataprotocols.org/spec/ as comments to parts that are mapped by the pipeline. More clarification can be brought by the examples further below. Only mapped parts of FDP specification are displayed - please compare it with the original specification to see what is not mapped.
 
 ```javascript
   "name": "Australia2014",
@@ -21,6 +21,15 @@ To make more clear what is mapped and what not, I took the original FDP specific
     "tabular": "*"
   },
 // unused
+
+  "author": "[?author]"
+// -> dcat:contactPoint http://data.openbudgets.eu/resource/agent/[urlencoded([?author])] ;
+//    dcterms:publisher http://data.openbudgets.eu/resource/agent/[urlencoded([?author])] .
+//    http://data.openbudgets.eu/resource/agent/[urlencoded([?author])] foaf:name "[?author]";
+//      vcard:fn "[?author]" .
+
+  "description": "[?description]"
+// -> dcterms:description "[?description]" 
 
   "granularity": "aggregated", 
 // unused
@@ -49,11 +58,11 @@ To make more clear what is mapped and what not, I took the original FDP specific
 ```javascript
 "measures": {
   "measure-name": {
-// -> measure-name used in the QB measure property URI
+// -> measure-name used in the QB measure property URI, further referenced as [qb:MeasureProperty]
     "source": "amount",
     
     "currency": "USD",
-// -> [qb:DataSet] obeu-attribute:currency <OKFGR code list value (https://github.com/openbudgets/Code-lists/tree/master/UnifiedViews/skosified/currencies)>
+// -> [qb:MeasureProperty] obeu-attribute:currency <OKFGR code list value (https://github.com/openbudgets/Code-lists/tree/master/UnifiedViews/skosified/currencies)>
     
     "factor": 1,
 // Used to multiply measure values when transformed
@@ -62,10 +71,10 @@ To make more clear what is mapped and what not, I took the original FDP specific
 // used to find measure values
     
     "direction": "expenditure",
-// -> [qb:DataSet] obeu-dimension:operationCharacter obeu-operation:expenditure or obeu-operation:revenue
+// -> [qb:MeasureProperty] <http://schemas.frictionlessdata.io/fiscal-data-package#operationCharacter> obeu-operation:expenditure or obeu-operation:revenue
     
     "phase": "proposed",
-// -> [qb:DataSet] obeu-budgetphase:draft, approved, revised, executed
+// -> [qb:MeasureProperty] <http://schemas.frictionlessdata.io/fiscal-data-package#budgetPhase> obeu-budgetphase:draft, approved, revised, executed
     
     // OPTIONAL: Other properties allowed.
     // other properties are not mapped

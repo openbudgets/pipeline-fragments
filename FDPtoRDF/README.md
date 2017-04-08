@@ -5,7 +5,7 @@
 The **FDPtoRDF.jsonld** file is a [LinkedPipes] pipeline fragment. It takes a [Fiscal Data Package] .jsonld descriptor as input, transforms the FDP into RDF OBEU representation and stores the result into a predefined triple-store.
 
 ## Prerequisities
-The pipeline uses [LinkedPipes component FDPtoRDF](https://github.com/opendatacz/lp-etl-components/tree/master/t-fdpToRdf), which is not part of LinkedPipes by default. You can deploy it into existing LinkedPipes installation by [downloading it](https://github.com/opendatacz/lp-etl-components/raw/master/t-fdpToRdf/deploy/t-fdpToRdf.zip) and extracting into `<Linked-pipes-directory>/deploy/jars/`. Restart LinkedPipes to load the component. The component needs LP-ETL version of commit [25e0bdd](https://github.com/linkedpipes/etl/commit/5b42e41a8986e93d092c7fff1e7d42c044a0873e) or later.
+The pipeline uses [LinkedPipes component FDPtoRDF](https://github.com/opendatacz/lp-etl-components/tree/master/t-fdpToRdf), which is not part of LinkedPipes by default. You can deploy it into existing LinkedPipes installation by [downloading it](https://github.com/opendatacz/lp-etl-components/raw/master/t-fdpToRdf/deploy/t-fdpToRdf.jar) and copying into `<Linked-pipes-directory>/deploy/jars/`. Restart LinkedPipes to load the component. The component needs LP-ETL version of commit [81f082d](https://github.com/linkedpipes/etl/commit/81f082d7007f655c9464cca65372ebb7a68ad298) or later.
 
 ## Installation
 
@@ -81,7 +81,7 @@ For debug purposes, the output can also be downloaded through the Detail view of
 
 ## Further documentation
 
-See the [developer's documentation](https://github.com/openbudgets/pipeline-fragments/blob/master/FDPtoRDF/documentation/FDPtoRDFdeveldocumentation.pdf) for details about the FDPtoRDF transformation process. Note that the latest changes in technical details of pipeline input and output are not reflected there, these are described in this file.
+See the [developer's documentation](https://github.com/openbudgets/pipeline-fragments/blob/master/FDPtoRDF/Documentation.md) for details about the FDPtoRDF transformation process. Note that the latest changes in technical details of pipeline input and output are not reflected there, these are described in this file.
 
 [LinkedPipes]: <http://etl.linkedpipes.com/> 
 [Fiscal Data Package]: <http://fiscal.dataprotocols.org/>
