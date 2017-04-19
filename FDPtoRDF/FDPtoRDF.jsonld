@@ -508,37 +508,6 @@
           ]
         },
         {
-          "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/28",
-          "@type": [
-            "http://linkedpipes.com/ontology/Connection"
-          ],
-          "http://linkedpipes.com/ontology/sourceBinding": [
-            {
-              "@value": "OutputFile"
-            }
-          ],
-          "http://linkedpipes.com/ontology/sourceComponent": [
-            {
-              "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/7"
-            }
-          ],
-          "http://linkedpipes.com/ontology/targetBinding": [
-            {
-              "@value": "FilesInput"
-            }
-          ],
-          "http://linkedpipes.com/ontology/targetComponent": [
-            {
-              "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/29"
-            }
-          ],
-          "http://linkedpipes.com/ontology/vertex": [
-            {
-              "@id": "http://localhost:9080/resources/pipelines/created-1477582476317/47/vertex/1"
-            }
-          ]
-        },
-        {
           "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/29",
           "@type": [
             "http://linkedpipes.com/ontology/Component"
@@ -558,18 +527,8 @@
               "@id": "http://etl.linkedpipes.com/resources/components/l-filesToScp/0.0.0"
             }
           ],
-          "http://linkedpipes.com/ontology/x": [
-            {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "2100"
-            }
-          ],
-          "http://linkedpipes.com/ontology/y": [
-            {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "0"
-            }
-          ],
+          "http://linkedpipes.com/ontology/x": 2200,
+          "http://linkedpipes.com/ontology/y": 0,
           "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
               "@value": "Files to SCP"
@@ -1147,7 +1106,8 @@
             {
               "@value": "Files to local"
             }
-          ]
+          ],
+          "http://linkedpipes.com/ontology/disabled": true
         },
         {
           "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/48",
@@ -2004,18 +1964,8 @@
               "@id": "http://etl.linkedpipes.com/resources/components/l-graphStoreProtocol/0.0.0"
             }
           ],
-          "http://linkedpipes.com/ontology/x": [
-            {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "2100"
-            }
-          ],
-          "http://linkedpipes.com/ontology/y": [
-            {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "-100"
-            }
-          ],
+          "http://linkedpipes.com/ontology/x": 2180,
+          "http://linkedpipes.com/ontology/y": -120,
           "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
               "@value": "Graph store protocol"
@@ -2528,6 +2478,12 @@
               "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/components/ff88aace-4d6c-422d-98af-8597b2083a40/configuration"
             }
           ],
+          "http://linkedpipes.com/ontology/disabled": [
+            {
+              "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+              "@value": "true"
+            }
+          ],
           "http://linkedpipes.com/ontology/template": [
             {
               "@id": "http://etl.linkedpipes.com/resources/components/e-filesFromLocal/0.0.0"
@@ -2536,21 +2492,20 @@
           "http://linkedpipes.com/ontology/x": [
             {
               "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "-1760"
+              "@value": "-1500"
             }
           ],
           "http://linkedpipes.com/ontology/y": [
             {
               "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "-740"
+              "@value": "-780"
             }
           ],
           "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
               "@value": "Files from local"
             }
-          ],
-          "http://linkedpipes.com/ontology/disabled": true
+          ]
         },
         {
           "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/connection/4583b4d0-1ff4-4b1f-9c94-0e939a383c58",
@@ -2603,6 +2558,20 @@
               "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/44"
             }
           ]
+        },
+        {
+          "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/connection/296f5c7c-ac70-4c42-b407-3932a8a3002c",
+          "@type": [
+            "http://linkedpipes.com/ontology/Connection"
+          ],
+          "http://linkedpipes.com/ontology/sourceComponent": {
+            "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/7"
+          },
+          "http://linkedpipes.com/ontology/sourceBinding": "OutputFile",
+          "http://linkedpipes.com/ontology/targetComponent": {
+            "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/29"
+          },
+          "http://linkedpipes.com/ontology/targetBinding": "FilesInput"
         },
         {
           "@id": "http://localhost:9080/resources/pipelines/created-1491590198274/16/vertex/1",
@@ -2665,7 +2634,7 @@
           ],
           "http://plugins.linkedpipes.com/ontology/e-filesFromLocal#path": [
             {
-              "@value": "c:\\temp\\test\\labelfor\\datapackage.jsonld"
+              "@value": "c:\\temp\\test\\test4\\datapackage.jsonld"
             }
           ],
           "http://plugins.linkedpipes.com/ontology/e-filesFromLocal#pathControl": [
