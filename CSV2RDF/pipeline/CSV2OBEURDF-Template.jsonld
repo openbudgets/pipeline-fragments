@@ -2999,7 +2999,7 @@
           "http://etl.linkedpipes.com/resource/components/e-dcatAp11Dataset/titles": [
             {
               "@language": "en",
-              "@value": "Municipality of Thessaloniki, Greece, {{@@operations_character@@}} Budget, fiscal year {{@@year@@}}"
+              "@value": "Municipality of Thessaloniki, Greece, {{@@operation_character@@}} Budget, fiscal year {{@@year@@}}"
             }
           ],
           "http://etl.linkedpipes.com/resource/components/e-dcatAp11Dataset/titlesControl": [
