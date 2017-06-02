@@ -1164,7 +1164,7 @@
           "@type": [
             "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#Configuration"
           ],
-          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#query": "PREFIX owl:    <http://www.w3.org/2002/07/owl#>\nPREFIX qb:     <http://purl.org/linked-data/cube#>\nPREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX spin:   <http://spinrdf.org/spin#>\n\nCONSTRUCT {\n  [] a spin:ConstraintViolation ;\n    spin:violationValue ?deprecatedTerm ;\n    rdfs:label \"The term used is deprecated.\"@en .\n}\nWHERE {\n  GRAPH <http://data.openbudgets.eu/ontology> {\n    ?deprecatedTerm owl:deprecated true .\n  }\n  GRAPH <http://data.openbudgets.eu/resource/dataset/validated-dataset> {\n    {\n      [] a ?deprecatedTerm .\n    } UNION {\n      [] ?deprectedTerm [] .\n    }\n  }\n}",
+          "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#query": "PREFIX owl:    <http://www.w3.org/2002/07/owl#>\nPREFIX qb:     <http://purl.org/linked-data/cube#>\nPREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX spin:   <http://spinrdf.org/spin#>\n\nCONSTRUCT {\n  [] a spin:ConstraintViolation ;\n    spin:violationValue ?deprecatedTerm ;\n    rdfs:label \"The term used is deprecated.\"@en .\n}\nWHERE {\n  GRAPH <http://data.openbudgets.eu/ontology> {\n    ?deprecatedTerm owl:deprecated true .\n  }\n  GRAPH <http://data.openbudgets.eu/resource/dataset/validated-dataset> {\n    {\n      [] a ?deprecatedTerm .\n    } UNION {\n      [] ?deprecatedTerm [] .\n    }\n  }\n}",
           "http://plugins.linkedpipes.com/ontology/e-sparqlEndpoint#endpoint": "http://obeu.vse.cz:8890/sparql"
         }
       ],
