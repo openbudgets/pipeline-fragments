@@ -261,7 +261,9 @@ Usually, each dataset should contain at least one column with amounts in some bu
    
 On this configuration you have to define your dimensions prefixes. Follow the naming convention we have described above. Don’t forget to change also the operation character segment. Possible values are “revenue” and “expenditure”. Leave the rest as is. 
 
-2.![](https://github.com/openbudgets/pipeline-fragments/raw/master/CSV2RDF/documentation/images/image21.png)
+2.
+
+![](https://github.com/openbudgets/pipeline-fragments/raw/master/CSV2RDF/documentation/images/image21.png)
   
 On the above settings we have to do the actual mapping of column values. Change the number after “column_” to reflect your tabular file structure. The “?codelist_id” variable is usually an id column, a classification identity. Then, ?value is the column where the value for a specific budget phase exists. Here we see the mapping for the “draft” budget phase. Change the number to match yours. 
 
