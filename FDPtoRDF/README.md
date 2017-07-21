@@ -15,6 +15,7 @@ The pipeline uses [LinkedPipes component FDPtoRDF](https://github.com/opendatacz
     - Graph Store protocol endpoint
     - User name and password
 3. Configure the **Files to SCP component** (also highlighted by red, just above the Graph Store Protocol component). Follow the [component's configuration documentation](http://etl.linkedpipes.com/components/l-filestoscp) if needed. The component can be disabled if not needed: by selecting the component node and clicking on the upper right button above it. This applies to the Graph Store Protocol as well.
+4. Configure the **Add result download url component**. The url defined inside the BIND expression of the SPARQL query needs to correspond to the hostname and path where the abovementioned Files to SCP component stores data dumps.
 4. Don't forget to click the **"apply changes"** and then **"save"** the whole pipeline (bottom-left button in the pipeline editor).
 
 ## Usage
