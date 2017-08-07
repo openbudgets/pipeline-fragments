@@ -15,7 +15,7 @@
           ],
           "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
-              "@value": "FDP to RDF v0.8.1 \"the secret path\""
+              "@value": "FDP to RDF v0.8.2 \"labels\""
             }
           ]
         },
@@ -449,18 +449,8 @@
               "@id": "http://etl.linkedpipes.com/resources/components/l-filesToScp/0.0.0"
             }
           ],
-          "http://linkedpipes.com/ontology/x": [
-            {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "2180"
-            }
-          ],
-          "http://linkedpipes.com/ontology/y": [
-            {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "0"
-            }
-          ],
+          "http://linkedpipes.com/ontology/x": 2180,
+          "http://linkedpipes.com/ontology/y": -1.1368683772161603e-13,
           "http://purl.org/dc/terms/description": [
             {
               "@value": "Configure urls and auth when pipeline (re)deployed"
@@ -2622,7 +2612,7 @@
           "http://linkedpipes.com/ontology/y": [
             {
               "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "-880"
+              "@value": "-900"
             }
           ],
           "http://purl.org/dc/terms/description": [
@@ -3077,7 +3067,7 @@
           ],
           "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#query": [
             {
-              "@value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fdp: <http://schemas.frictionlessdata.io/fiscal-data-package#>\nPREFIX fcsv: <file://budget.csv#>\nPREFIX obeu-attribute:   <http://data.openbudgets.eu/ontology/dsd/attribute/> \nPREFIX obeu-dimension:   <http://data.openbudgets.eu/ontology/dsd/dimension/> \nPREFIX obeu-measure:     <http://data.openbudgets.eu/ontology/dsd/measure/> \nPREFIX qb: <http://purl.org/linked-data/cube#>\nPREFIX datasets: <http://data.openbudgets.eu/datasets/>\nPREFIX fdprdf: <http://data.openbudgets.eu/fdptordf#>\nPREFIX time: <http://www.w3.org/2006/time#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX dcat: <http://www.w3.org/ns/dcat#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n\n\nCONSTRUCT {\n    ?dataset dcat:accessURL ?dumpUrl ;\n    \t\tdcat:downloadURL ?dumpUrl .\n}\nWHERE {\n  ?dataset a qb:DataSet;\n           fdprdf:datasetShortName ?packageName .\n      \n  BIND( URI(CONCAT(\"http://apps.openbudgets.eu/dumps/fromfdp/\", ?packageName, \".nt\")) AS ?dumpUrl) .\n}"
+              "@value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fdp: <http://schemas.frictionlessdata.io/fiscal-data-package#>\nPREFIX fcsv: <file://budget.csv#>\nPREFIX obeu-attribute:   <http://data.openbudgets.eu/ontology/dsd/attribute/> \nPREFIX obeu-dimension:   <http://data.openbudgets.eu/ontology/dsd/dimension/> \nPREFIX obeu-measure:     <http://data.openbudgets.eu/ontology/dsd/measure/> \nPREFIX qb: <http://purl.org/linked-data/cube#>\nPREFIX datasets: <http://data.openbudgets.eu/datasets/>\nPREFIX fdprdf: <http://data.openbudgets.eu/fdptordf#>\nPREFIX time: <http://www.w3.org/2006/time#>\nPREFIX dcterms: <http://purl.org/dc/terms/>\nPREFIX dcat: <http://www.w3.org/ns/dcat#>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n\n\nCONSTRUCT {\n    ?dataset dcat:distribution ?distribution .\n    ?distribution a dcat:Distribution;\n  \t\t\tdcat:accessURL ?dumpUrl ;\n    \t\tdcat:downloadURL ?dumpUrl .\n}\nWHERE {\n  ?dataset a qb:DataSet;\n           fdprdf:datasetShortName ?packageName .\n      \n  BIND( URI(CONCAT(\"http://apps.openbudgets.eu/dumps/fromfdp/\", ?packageName, \".nt\")) AS ?dumpUrl) \n  BIND( URI(CONCAT(str(?dataset), \"/distribution\")) AS ?distribution)\n}"
             }
           ],
           "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#queryControl": [
@@ -3386,13 +3376,13 @@
     {
       "@graph": [
         {
-          "@id": "http://localhost:9080/resources/pipelines/created-1495614956089/117",
+          "@id": "http://localhost:9080/resources/pipelines/created-1495614956089/24/configuration",
           "@type": [
             "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#Configuration"
           ],
           "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#query": [
             {
-              "@value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fdp: <http://schemas.frictionlessdata.io/fiscal-data-package#>\nPREFIX fcsv: <file://budget.csv#>\nPREFIX obeu-attribute:   <http://data.openbudgets.eu/ontology/dsd/attribute/> \nPREFIX obeu-dimension:   <http://data.openbudgets.eu/ontology/dsd/dimension/> \nPREFIX obeu-measure:     <http://data.openbudgets.eu/ontology/dsd/measure/> \nPREFIX qb: <http://purl.org/linked-data/cube#>\nPREFIX datasets: <http://data.openbudgets.eu/datasets/>\nPREFIX fdprdf: <http://data.openbudgets.eu/fdptordf#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n\nCONSTRUCT \n{\n  ?dsd qb:component [ qb:dimension ?dimensionProperty ;\n  \t\t\t\t\t  fdprdf:valueType fdprdf:unknown ].   \n  ?dimensionProperty a rdf:Property, qb:DimensionProperty;\n                     fdprdf:name ?dimensionName ;\n  \t\t\t\t\t rdfs:range owl:Thing .\n}\nWHERE \n{\n  ?dsd a qb:DataStructureDefinition .\n  \n  ?desc fdp:name ?packageName;\n        fdp:model ?model .\n  \n  ?model fdp:dimensions ?dimensions .\n  \n  ?dimensions ?fdpDimensionProperty ?dimension .\n    \n  FILTER NOT EXISTS {?dimension fdp:dimensionType ?dimensionType .}\n  \n  BIND(ENCODE_FOR_URI(strafter(str(?fdpDimensionProperty), \"#\")) AS ?dimensionName)\n    \n  BIND(URI(CONCAT(\"http://data.openbudgets.eu/ontology/dsd/\",?packageName,\"/dimension/\",?dimensionName)) AS ?dimensionProperty)\n}"
+              "@value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fdp: <http://schemas.frictionlessdata.io/fiscal-data-package#>\nPREFIX fcsv: <file://budget.csv#>\nPREFIX obeu-attribute:   <http://data.openbudgets.eu/ontology/dsd/attribute/> \nPREFIX obeu-dimension:   <http://data.openbudgets.eu/ontology/dsd/dimension/> \nPREFIX obeu-measure:     <http://data.openbudgets.eu/ontology/dsd/measure/> \nPREFIX qb: <http://purl.org/linked-data/cube#>\nPREFIX datasets: <http://data.openbudgets.eu/datasets/>\nPREFIX fdprdf: <http://data.openbudgets.eu/fdptordf#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n\nCONSTRUCT \n{\n  ?dsd qb:component [ qb:dimension ?dimensionProperty ;\n  \t\t\t\t\t  fdprdf:valueType fdprdf:unknown ].   \n  ?dimensionProperty a rdf:Property, qb:DimensionProperty;\n                     fdprdf:name ?dimensionName ;\n                     rdfs:label ?dimensionName ;\n  \t\t     rdfs:range owl:Thing .\n}\nWHERE \n{\n  ?dsd a qb:DataStructureDefinition .\n  \n  ?desc fdp:name ?packageName;\n        fdp:model ?model .\n  \n  ?model fdp:dimensions ?dimensions .\n  \n  ?dimensions ?fdpDimensionProperty ?dimension .\n    \n  FILTER NOT EXISTS {?dimension fdp:dimensionType ?dimensionType .}\n  \n  BIND(ENCODE_FOR_URI(strafter(str(?fdpDimensionProperty), \"#\")) AS ?dimensionName)\n    \n  BIND(URI(CONCAT(\"http://data.openbudgets.eu/ontology/dsd/\",?packageName,\"/dimension/\",?dimensionName)) AS ?dimensionProperty)\n}"
             }
           ],
           "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#queryControl": [
@@ -3459,19 +3449,9 @@
               "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
             }
           ],
-          "http://plugins.linkedpipes.com/ontology/l-filesToScp#host": [
-            {
-              "@value": ""
-            }
-          ],
           "http://plugins.linkedpipes.com/ontology/l-filesToScp#hostControl": [
             {
               "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
-            }
-          ],
-          "http://plugins.linkedpipes.com/ontology/l-filesToScp#password": [
-            {
-              "@value": ""
             }
           ],
           "http://plugins.linkedpipes.com/ontology/l-filesToScp#passwordControl": [
@@ -3479,20 +3459,9 @@
               "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
             }
           ],
-          "http://plugins.linkedpipes.com/ontology/l-filesToScp#port": [
-            {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "22"
-            }
-          ],
           "http://plugins.linkedpipes.com/ontology/l-filesToScp#portControl": [
             {
               "@id": "http://plugins.linkedpipes.com/resource/configuration/None"
-            }
-          ],
-          "http://plugins.linkedpipes.com/ontology/l-filesToScp#userName": [
-            {
-              "@value": ""
             }
           ],
           "http://plugins.linkedpipes.com/ontology/l-filesToScp#userNameControl": [
@@ -3539,7 +3508,7 @@
           ],
           "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#query": [
             {
-              "@value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fdp: <http://schemas.frictionlessdata.io/fiscal-data-package#>\nPREFIX obeu-attribute:   <http://data.openbudgets.eu/ontology/dsd/attribute/> \nPREFIX obeu-dimension:   <http://data.openbudgets.eu/ontology/dsd/dimension/> \nPREFIX obeu-measure:     <http://data.openbudgets.eu/ontology/dsd/measure/> \nPREFIX qb: <http://purl.org/linked-data/cube#>\nPREFIX fdprdf: <http://data.openbudgets.eu/fdptordf#>\nPREFIX obeu: <http://data.openbudgets.eu/ontology/> \nPREFIX org: <http://www.w3.org/ns/org#>\nPREFIX time: <http://www.w3.org/2006/time#>\nPREFIX schema: <http://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n\nCONSTRUCT \n{\n  ?dsd qb:component [ ?qbDimensionOrAttribute ?dimensionProperty;\n                                     fdprdf:valueType ?fdprdfValueType ]. \n  ?dimensionProperty a rdf:Property, ?qbParentProperty, ?extraQbParentProperty ;\n    rdfs:subPropertyOf ?obeuParentProperty ;\n    fdprdf:name ?dimensionName ;\n    rdfs:range ?dimPropRange .\n}\nWHERE \n{\n  VALUES (?fdpDimensionType ?fdpDimensionSubType \t?obeuParentProperty \t\t\t\t\t?qbDimensionOrAttribute ?qbParentProperty \t\t?extraQbParentProperty \t?fdprdfValueType\t?dimPropRange) {\n        (\"entity\" \t\t\tUNDEF \t\t\t\t \tobeu-dimension:organization \t\t\tqb:dimension \t\t\tqb:DimensionProperty \tUNDEF \t\t\t\t\tfdprdf:organization\torg:Organization)\n        (\"datetime\" \t\tUNDEF \t\t\t\t\tobeu-dimension:date \t\t\t\t\tqb:dimension \t\t\tqb:DimensionProperty \tUNDEF \t\t\t\t\tfdprdf:dateTime\t\ttime:Interval)\n        (\"location\" \t\tUNDEF \t\t\t\t\tobeu-attribute:location \t\t\t\tqb:attribute \t\t\tqb:AttributeProperty \tUNDEF \t\t\t\t\tfdprdf:location\t\tschema:Place)\n        (\"fact\" \t\t\tUNDEF \t\t\t\t\tUNDEF \t\t\t\t\t\t\t\t\tqb:componentProperty \tobeu:OptionalProperty \tUNDEF \t\t\t\t\tfdprdf:fact\t\t\towl:Thing\t)\n        (\"activity\" \t\tUNDEF \t\t\t\t\tobeu-dimension:programmeClassification \tqb:dimension\t\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"classification\"\t\"functional\"\t\t\tobeu-dimension:functionalClassification\tqb:dimension\t\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"classification\"\t\"administrative\"\t\tobeu-dimension:administrativeClassification qb:dimension\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"classification\"\t\"economic\"\t\t\t\tobeu-dimension:economicClassification\tqb:dimension\t\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"classification\"\tUNDEF\t\t\t\t\tobeu-dimension:classification\t\t\tqb:dimension\t\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"other\"\t\t\tUNDEF\t\t\t\t\tUNDEF\t\t\t\t\t\t\t\t\tqb:dimension\t\t\tqb:DimensionProperty\tUNDEF\t\t\t\t\tfdprdf:unknown\t\towl:Thing\t\t)\n  }\n\n  ?dsd a qb:DataStructureDefinition .\n\n  ?desc fdp:name ?packageName;\n        fdp:model ?model .\n\n  ?model fdp:dimensions ?dimensions .\n\n  ?dimensions ?fdpDimensionProperty ?dimension .\n  ?dimension fdp:dimensionType ?fdpDimensionType .    \n  \n  FILTER NOT EXISTS {?fdpDimensionProperty fdprdf:mappedTo [] .}\n  \n  OPTIONAL { ?dimension fdp:classificationType ?fdpClassificationType }\n  FILTER(IF(BOUND(?fdpDimensionSubType), ?fdpClassificationType = ?fdpDimensionSubType, !EXISTS {?dimension fdp:classificationType ?something}))\n\n  BIND(ENCODE_FOR_URI(strafter(str(?fdpDimensionProperty), \"#\")) AS ?dimensionName)\n\n  BIND(URI(CONCAT(\"http://data.openbudgets.eu/ontology/dsd/\",?packageName,\"/dimension/\",?dimensionName)) AS ?dimensionProperty)\n}"
+              "@value": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fdp: <http://schemas.frictionlessdata.io/fiscal-data-package#>\nPREFIX obeu-attribute:   <http://data.openbudgets.eu/ontology/dsd/attribute/> \nPREFIX obeu-dimension:   <http://data.openbudgets.eu/ontology/dsd/dimension/> \nPREFIX obeu-measure:     <http://data.openbudgets.eu/ontology/dsd/measure/> \nPREFIX qb: <http://purl.org/linked-data/cube#>\nPREFIX fdprdf: <http://data.openbudgets.eu/fdptordf#>\nPREFIX obeu: <http://data.openbudgets.eu/ontology/> \nPREFIX org: <http://www.w3.org/ns/org#>\nPREFIX time: <http://www.w3.org/2006/time#>\nPREFIX schema: <http://schema.org/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n\nCONSTRUCT \n{\n  ?dsd qb:component [ ?qbDimensionOrAttribute ?dimensionProperty;\n                                     fdprdf:valueType ?fdprdfValueType ]. \n  ?dimensionProperty a rdf:Property, ?qbParentProperty, ?extraQbParentProperty ;\n    rdfs:subPropertyOf ?obeuParentProperty ;\n    fdprdf:name ?dimensionName ;\n    rdfs:label ?dimensionName ;\n    rdfs:range ?dimPropRange .\n}\nWHERE \n{\n  VALUES (?fdpDimensionType ?fdpDimensionSubType \t?obeuParentProperty \t\t\t\t\t?qbDimensionOrAttribute ?qbParentProperty \t\t?extraQbParentProperty \t?fdprdfValueType\t?dimPropRange) {\n        (\"entity\" \t\t\tUNDEF \t\t\t\t \tobeu-dimension:organization \t\t\tqb:dimension \t\t\tqb:DimensionProperty \tUNDEF \t\t\t\t\tfdprdf:organization\torg:Organization)\n        (\"datetime\" \t\tUNDEF \t\t\t\t\tobeu-dimension:date \t\t\t\t\tqb:dimension \t\t\tqb:DimensionProperty \tUNDEF \t\t\t\t\tfdprdf:dateTime\t\ttime:Interval)\n        (\"location\" \t\tUNDEF \t\t\t\t\tobeu-attribute:location \t\t\t\tqb:attribute \t\t\tqb:AttributeProperty \tUNDEF \t\t\t\t\tfdprdf:location\t\tschema:Place)\n        (\"fact\" \t\t\tUNDEF \t\t\t\t\tUNDEF \t\t\t\t\t\t\t\t\tqb:componentProperty \tobeu:OptionalProperty \tUNDEF \t\t\t\t\tfdprdf:fact\t\t\towl:Thing\t)\n        (\"activity\" \t\tUNDEF \t\t\t\t\tobeu-dimension:programmeClassification \tqb:dimension\t\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"classification\"\t\"functional\"\t\t\tobeu-dimension:functionalClassification\tqb:dimension\t\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"classification\"\t\"administrative\"\t\tobeu-dimension:administrativeClassification qb:dimension\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"classification\"\t\"economic\"\t\t\t\tobeu-dimension:economicClassification\tqb:dimension\t\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"classification\"\tUNDEF\t\t\t\t\tobeu-dimension:classification\t\t\tqb:dimension\t\t\tqb:DimensionProperty\tqb:CodedProperty\t\tfdprdf:skos\t\t\tskos:Concept\t\t\t)\n    \t(\"other\"\t\t\tUNDEF\t\t\t\t\tUNDEF\t\t\t\t\t\t\t\t\tqb:dimension\t\t\tqb:DimensionProperty\tUNDEF\t\t\t\t\tfdprdf:unknown\t\towl:Thing\t\t)\n  }\n\n  ?dsd a qb:DataStructureDefinition .\n\n  ?desc fdp:name ?packageName;\n        fdp:model ?model .\n\n  ?model fdp:dimensions ?dimensions .\n\n  ?dimensions ?fdpDimensionProperty ?dimension .\n  ?dimension fdp:dimensionType ?fdpDimensionType .    \n  \n  FILTER NOT EXISTS {?fdpDimensionProperty fdprdf:mappedTo [] .}\n  \n  OPTIONAL { ?dimension fdp:classificationType ?fdpClassificationType }\n  FILTER(IF(BOUND(?fdpDimensionSubType), ?fdpClassificationType = ?fdpDimensionSubType, !EXISTS {?dimension fdp:classificationType ?something}))\n\n  BIND(ENCODE_FOR_URI(strafter(str(?fdpDimensionProperty), \"#\")) AS ?dimensionName)\n\n  BIND(URI(CONCAT(\"http://data.openbudgets.eu/ontology/dsd/\",?packageName,\"/dimension/\",?dimensionName)) AS ?dimensionProperty)\n}"
             }
           ],
           "http://plugins.linkedpipes.com/ontology/t-sparqlConstruct#queryControl": [
